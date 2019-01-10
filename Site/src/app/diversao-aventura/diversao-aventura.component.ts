@@ -117,7 +117,8 @@ export class DiversaoAventuraComponent implements OnInit {
     },{
       src: 'assets/images/diversao-aventura/lancha4.jpg',
       alt: 'Fotos do passeio de lancha'
-    },{
+    },
+    {
       src: 'assets/images/diversao-aventura/lancha5.jpg',
       alt: 'Fotos do passeio de lancha'
     }
@@ -178,7 +179,7 @@ export class DiversaoAventuraComponent implements OnInit {
     private title: Title,
     public _lightbox: Lightbox
     ) {
-      for (let i = 1; i <= this.galeria.length; i++) {
+      for (let i = 1; i <= 18; i++) {
         const src = 'assets/images/diversao-aventura/galeria/galeria' + i + '.jpg';
         const caption = 'Diversão e Aventura';
         const album = {

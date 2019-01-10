@@ -156,7 +156,7 @@ export class TranquilidadeLazerComponent implements OnInit {
     private title: Title,
     public _lightbox: Lightbox
     ) {
-      for (let i = 1; i <= this.galeria.length; i++) {
+      for (let i = 1; i <= 11; i++) {
         const src = 'assets/images/tranquilidade-lazer/galeria/galeria' + i + '.jpg';
         const caption = 'Tranquilidade e Lazer';
         const album = {

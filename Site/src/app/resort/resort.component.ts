@@ -141,7 +141,7 @@ export class ResortComponent implements OnInit {
     private title: Title,
     public _lightbox: Lightbox
     ) {
-      for (let i = 1; i <= this.galeria.length; i++) {
+      for (let i = 1; i <= 14; i++) {
         const src = 'assets/images/resort/galeria/galeria' + i + '.jpg';
         const caption = 'O Resort';
         const album = {
