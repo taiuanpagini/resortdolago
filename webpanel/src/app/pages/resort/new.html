@@ -1,0 +1,221 @@
+<div class="main-content">
+    <div class="container-fluid">
+
+        <!--ROW FORM-->
+        <div class="row">
+
+            <div class="col-md-12">
+
+                <div class="card">
+                    <form #form="ngForm" (ngSubmit)="postItem(form)">
+
+                        <div class="card-header card-header-icon card-page-{{this.GlobalService.theme}}">
+                            <i class="material-icons">menu</i>
+                        </div>
+
+                        <div class="card-content">
+                            <h4 class="card-title"><strong>Adicionar item</strong></h4>
+
+                            <div class="row">
+
+                                <div class="col-sm-4">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="material-icons">text_fields</i>
+                                        </span>
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">Título da Página
+                                                <small>(obrigatório)</small>
+                                            </label>
+                                            <input name="titulo" ngModel type="text" required class="form-control input-{{this.GlobalService.theme}}">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="material-icons">text_fields</i>
+                                        </span>
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">Subtitulo da Página
+                                                <small>(obrigatório)</small>
+                                            </label>
+                                            <input name="subtitulo" ngModel type="text" required class="form-control input-{{this.GlobalService.theme}}">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="material-icons">text_fields</i>
+                                        </span>
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">Título da Galeria de Fotos
+                                                <small>(obrigatório)</small>
+                                            </label>
+                                            <input name="titulo_galeria" ngModel type="text" required class="form-control input-{{this.GlobalService.theme}}">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">
+                                                        <i class="material-icons">text_fields</i>
+                                                    </span>
+                                                    <div class="form-group label-floating">
+                                                        <label class="control-label">Título do Parque
+                                                            <small>(obrigatório)</small>
+                                                        </label>
+                                                        <input name="titulo_parque" ngModel type="text" required class="form-control input-{{this.GlobalService.theme}}">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-12">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">
+                                                        <i class="material-icons">text_fields</i>
+                                                    </span>
+                                                    <div class="form-group label-floating">
+                                                        <label class="control-label">Descrição do Parque
+                                                            <small>(obrigatório)</small>
+                                                        </label>
+                                                        <app-ngx-editor name="descricao_parque" [placeholder]="'Digite aqui o texto'"
+                                                            [spellcheck]="true" ngModel></app-ngx-editor>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">
+                                                        <i class="material-icons">text_fields</i>
+                                                    </span>
+                                                    <div class="form-group label-floating">
+                                                        <label class="control-label">Título das Acomodações
+                                                            <small>(obrigatório)</small>
+                                                        </label>
+                                                        <input name="titulo_acomodacoes" ngModel type="text" required class="form-control input-{{this.GlobalService.theme}}">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-12">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">
+                                                        <i class="material-icons">text_fields</i>
+                                                    </span>
+                                                    <div class="form-group label-floating">
+                                                        <label class="control-label">Descrição das Acomodações
+                                                            <small>(obrigatório)</small>
+                                                        </label>
+                                                        <app-ngx-editor name="descricao_acomodacoes" [placeholder]="'Digite aqui o texto'"
+                                                            [spellcheck]="true" ngModel></app-ngx-editor>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">
+                                                        <i class="material-icons">text_fields</i>
+                                                    </span>
+                                                    <div class="form-group label-floating">
+                                                        <label class="control-label">Título da Gastronomia
+                                                            <small>(obrigatório)</small>
+                                                        </label>
+                                                        <input name="titulo_gastronomia" ngModel type="text" required class="form-control input-{{this.GlobalService.theme}}">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-12">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">
+                                                        <i class="material-icons">text_fields</i>
+                                                    </span>
+                                                    <div class="form-group label-floating">
+                                                        <label class="control-label">Descrição da Gastronomia
+                                                            <small>(obrigatório)</small>
+                                                        </label>
+                                                        <app-ngx-editor name="descricao_gastronomia" [placeholder]="'Digite aqui o texto'"
+                                                            [spellcheck]="true" ngModel></app-ngx-editor>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">
+                                                        <i class="material-icons">text_fields</i>
+                                                    </span>
+                                                    <div class="form-group label-floating">
+                                                        <label class="control-label">Título do Lago
+                                                            <small>(obrigatório)</small>
+                                                        </label>
+                                                        <input name="titulo_lago" ngModel type="text" required class="form-control input-{{this.GlobalService.theme}}">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-12">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">
+                                                        <i class="material-icons">text_fields</i>
+                                                    </span>
+                                                    <div class="form-group label-floating">
+                                                        <label class="control-label">Descrição do Lago
+                                                            <small>(obrigatório)</small>
+                                                        </label>
+                                                        <app-ngx-editor name="descricao_lago" [placeholder]="'Digite aqui o texto'"
+                                                            [spellcheck]="true" ngModel></app-ngx-editor>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>                                    
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!--SUBMIT BTN-->
+                        <div class="card-footer">
+                            <div class="col-sm-12 text-right">
+                                <button type="submit" class="btn btn-success" [disabled]="this.GlobalService.inProcessForm">
+                                    Adicionar
+                                    <i class="material-icons">keyboard_arrow_right</i>
+                                </button>
+                                <p><br></p>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <component-back-button></component-back-button>
+            </div>
+
+        </div>
+        <!--ROW FINAL-->
+
+    </div>
+</div>

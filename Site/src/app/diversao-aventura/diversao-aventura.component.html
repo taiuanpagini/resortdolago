@@ -1,0 +1,186 @@
+<div class="loaders">
+	<div class="loader">
+	  <div id="resort"></div>
+	  <span class="text-center txt-loader">Carregando</span>
+	</div>
+</div>
+
+<app-header></app-header>
+
+<main>
+  <section class="title-interno wow fadeIn">
+    <div class="container-fluid">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center">
+            <h2 class="title-interno">Diversão e Aventura</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end section title-interno -->
+
+  <section class="txt-orientacao wow fadeIn">
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+          <h3 class="subtitle">Mega atrações diretamente da Califórnia para você!</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end section txt-orientacao -->
+
+  <section class="slider-100 wow fadeInUp">
+    <div class="slider-full">
+      <owl-carousel [options]="sliderOptionsHalf" [carouselClasses]="['owl-theme', 'row', 'sliding']">
+        <div class="item" *ngFor="let img of sliderHalf">
+          <img [src]="img.src" [alt]="img.alt">
+        </div>
+      </owl-carousel>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="offset-xl-1 col-xl-10 offset-lg-1 col-lg-10 offset-md-1 col-md-10">
+          <h2 class="title-brinquedo">Half Pipe</h2>
+          <p class="description-brinquedo">
+            Se sua viagem precisa de um pouco de adrenalina para ficar perfeita, o Half-pipe é o brinquedo ideal para você. São 10 metros de altura e uma queda ligeira de 2 segundos, quase um piscar de olhos, não é mesmo? Aqui sua emoção é compartilhada e para embarcar nesta aventura será necessário duas pessoas e uma boia específica para a atividade. E aí, vai encarar?
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end section halfpipe -->
+
+  <section class="slider-50">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12 wow slideInLeft">
+          <owl-carousel [options]="sliderOptionsHalf" [carouselClasses]="['owl-theme', 'row', 'sliding']">
+            <div class="item" *ngFor="let img of sliderLancha">
+              <img [src]="img.src" [alt]="img.alt">
+            </div>
+          </owl-carousel>
+          <div class="rellax absolute paralax-diversao-1" data-rellax-speed=".7"></div>
+        </div>
+        <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-12 my-auto wow slideInRight">
+          <h2 class="title-brinquedo">Passeio de Lancha</h2>
+          <p class="description-brinquedo">
+            Um delicioso passeio guiado por profissionais, onde sua única preocupação será sentir a brisa do cerrado e apreciar a paisagem típica. Desfrute das belezas do Lago Corumbá em um passeio de lancha. São 50 minutos na lancha que acomoda até 6 pessoas confortavelmente. Uma experiência incrível.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end section passeio de lancha -->
+
+  <section class="slider-50">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-12 text-right my-auto wow slideInLeft">
+            <h2 class="title-brinquedo">Parque Aquático</h2>
+            <p class="description-brinquedo">
+              O parque aquático do Resort do Lago foi pensado e planejado para toda família, sua experiência irá do extremo relaxamento à incomparável adrenalina dos nossos brinquedos radicais.  Localizado bem as margens do lago corumbá o parque tem uma estrutura personalizada para as crianças, onde o baldão maluco, escorregadores infantis e uma completa piscina infantil compõem esta área para os pequenos.
+            </p>
+          </div>
+          <div class="rellax absolute paralax-diversao-2" data-rellax-speed=".7"></div>
+          <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12 wow slideInRight">
+            <owl-carousel [options]="sliderOptionsHalf" [carouselClasses]="['owl-theme', 'row', 'sliding']">
+              <div class="item" *ngFor="let img of sliderParque">
+                <img [src]="img.src" [alt]="img.alt">
+              </div>
+            </owl-carousel>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end section parque aquatico -->
+
+  <section class="slider-100">
+    <div class="slider-full-2">
+      <owl-carousel [options]="sliderOptionsHalf" [carouselClasses]="['owl-theme', 'row', 'sliding']">
+        <div class="item" *ngFor="let img of sliderSimulador">
+          <img [src]="img.src" [alt]="img.alt">
+        </div>
+      </owl-carousel>
+    </div>
+    <div class="rellax absolute paralax-diversao-2 paralax-diversao-3" data-rellax-speed=".7"></div>
+    <div class="container">
+      <div class="row">
+        <div class="offset-xl-1 col-xl-10 offset-lg-1 col-lg-10 col-md-12 col-sm-12 col-12">
+          <h2 class="title-brinquedo">Simulador de Surf</h2>
+          <p class="description-brinquedo">
+            Este é o único simulador de surf da região. Um brinquedo radical para os amantes da adrenalina que é surfar. O Surfô possui uma vasão de água com pressão controlada para que você consiga ter a sensação real do que é surfar, para esta atração será necessário muito equilíbrio e atenção.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end section simulador de surf -->
+
+  <section class="slider-50">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12 wow slideInLeft">
+          <owl-carousel [options]="sliderOptionsHalf" [carouselClasses]="['owl-theme', 'row', 'sliding']">
+            <div class="item" *ngFor="let img of sliderCaiaque">
+              <img [src]="img.src" [alt]="img.alt">
+            </div>
+          </owl-carousel>
+        </div>
+        <div class="rellax absolute paralax-diversao-4" data-rellax-speed=".7"></div>
+        <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-12 my-auto wow slideInRight">          
+          <h2 class="title-brinquedo">Caiaque</h2>
+          <p class="description-brinquedo">
+            Sombra e água fresca faz parte desta atividade relaxante em meio ao lago Corumbá. Se você quer o contato direto com o cerrado aliado a comodidade, o passeio de caiaque é para você. Tranquilidade e sossego resumem bem esta experiência.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end section caiaque -->
+
+  <!-- <section class="slider-50">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-12 text-right my-auto wow slideInLeft">
+          <h2 class="title-brinquedo">Stand Up Paddle</h2>
+          <p class="description-brinquedo">
+            A bordo de uma prancha específica para a atividade você poderá apreciar de perto as belezas naturais do cerrado, praticando um excelente exercício físico aliado a tranquilidade que o lago Corumbá traz. Esta atividade é voltada para um contato ainda mais direto com a natureza, onde você determina a intensidade do seu passeio.
+          </p>
+        </div>
+        <div class="rellax absolute paralax-diversao-6" data-rellax-speed=".7"></div>
+        <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12 wow slideInRight">
+          <div class="rellax absolute paralax-diversao-5" data-rellax-speed=".7"></div>
+          <owl-carousel [options]="sliderOptionsHalf" [carouselClasses]="['owl-theme', 'row', 'sliding']">
+            <div class="item" *ngFor="let img of sliderStand">
+              <img [src]="img.src" [alt]="img.alt">
+            </div>
+          </owl-carousel>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <!-- end section stand up paddle -->
+
+  <section class="galeria">
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+          <h2 class="title-brinquedo">Galeria de Fotos</h2>
+        </div>
+      </div>
+      <div class="row galeria-div wow fadeIn">
+        <a *ngFor="let image of _album; let i=index" class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12" (click)="open(i)">
+          <img [src]="image.src" class="img-fluid">
+        </a>
+        <!-- <div *ngFor="let image of _album; let i=index" class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12">
+          <img [src]="image.src" class="img-fluid" (click)="open(i)"/>
+        </div> -->
+      </div>
+    </div>
+  </section>
+</main>
+
+<app-footer></app-footer>

@@ -1,0 +1,45 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+        
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" (click)="sidebarToggle()">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <img [src]="this.GlobalService.imgLogoNavBar" class="logo-cliente">
+
+        </div>
+
+        <div class="collapse navbar-collapse">
+            <div *ngIf="isMobileMenu()">
+                <ul class="navbar-nav navbar-right navbar-dash">
+
+                    <!--FULLSCREEN-->
+                    <li class="nav-item">
+                        <a href="#" (click)="this.GlobalService.fullScreen()" tooltip="Tela cheia" placement="left" class="nav-link" data-toggle="dropdown">
+                            <i class="material-icons">zoom_out_map</i>
+                        </a>
+                    </li>
+
+                    <!--DADOS USER-->
+                    <li class="nav-item">
+                        <a href="#" class="nav-link dropdown-toggle" tooltip="Usuário" placement="left" data-toggle="dropdown">
+                            <i class="fa fa-user"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a (click)="this.GlobalService.editPerfil(id)" class="tipo-link">Meus dados</a></li>
+                            <li><a (click)="this.GlobalService.alterarSenha(id)" class="tipo-link">Alterar senha</a></li>
+                            <li>
+                            <li class="divider"></li>
+                            <li><a (click)="this.SessionService.getLogout()" class="tipo-link">Sair</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>

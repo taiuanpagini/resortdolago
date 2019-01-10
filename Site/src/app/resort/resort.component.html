@@ -1,0 +1,142 @@
+<div class="loaders">
+	<div class="loader">
+	  <div id="resort"></div>
+	  <span class="text-center txt-loader">Carregando</span>
+	</div>
+</div>
+
+<app-header></app-header>
+
+<main class="resort">
+    <section class="title-interno wow fadeIn">
+      <div class="container-fluid">
+        <div class="container">
+          <div class="row">
+            <div class="col text-center">
+              <h2 class="title-interno">O Resort</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end section title-interno -->
+  
+    <section class="txt-orientacao wow fadeIn">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center">
+            <h3 class="subtitle">O melhor resort às margens do Lago Corumbá</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end section txt-orientacao -->
+  
+    <section id="parque-aquatico" class="slider-100 wow fadeInUp">
+      <div class="slider-full">
+        <owl-carousel [options]="sliderOptionsHalf" [carouselClasses]="['owl-theme', 'row', 'sliding']">
+          <div class="item" *ngFor="let img of sliderParque">
+            <img [src]="img.src" alt="img.alt">
+          </div>
+        </owl-carousel>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="offset-xl-1 col-xl-10 offset-lg-1 col-lg-10 offset-md-1 col-md-10">
+            <h2 class="title-brinquedo">Parque Aquático</h2>
+            <p class="description-brinquedo">
+                O parque aquático do Resort do Lago foi pensado e planejado para toda família, sua experiência irá do extremo relaxamento à incomparável adrenalina dos nossos brinquedos radicais. <br>
+                Localizado bem às margens do lago Corumbá, o parque tem uma estrutura personalizada para as crianças, onde o baldão maluco, escorregadores infantis e uma completa piscina infantil compõem esta área para os pequenos. <br>
+                Já para os adultos a piscina de borda infinita com vista para o lago mais conhecida como oásis é um grande atrativo, onde você irá desfrutar de muita beleza e total relaxamento.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end section halfpipe -->
+  
+    <section id="acomodacoes" class="slider-50">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12 wow slideInLeft">
+            <owl-carousel [options]="sliderOptionsHalf" [carouselClasses]="['owl-theme', 'row', 'sliding']">
+              <div class="item" *ngFor="let img of sliderAcomodacoes">
+                <img [src]="img.src" alt="img.alt">
+              </div>
+            </owl-carousel>
+            <div class="rellax absolute paralax-diversao-1" data-rellax-speed=".7"></div>
+          </div>
+          <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-12 my-auto wow slideInRight">
+            <h2 class="title-brinquedo">Acomodações</h2>
+            <p class="description-brinquedo">
+              Para que suas férias sejam perfeitas, o Resort do Lago não economizou nas acomodações. São apartamentos com um ou dois quartos que acomodam até sete pessoas confortavelmente, todos equipados com ar condicionado, cozinha americana e camas super macias e aconchegantes. Do quarto você ainda pode apreciar uma incrível vista do Lago Corumbá na tranquilidade de sua varanda ampla exclusiva.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end section passeio de lancha -->
+  
+    <section id="gastronomia" class="slider-50">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-12 text-right my-auto wow slideInLeft">
+              <h2 class="title-brinquedo">Gastronomia</h2>
+              <p class="description-brinquedo">
+                  Com uma variedade de saladas, pratos à la carte e sobremesas você irá se encantar com a gastronomia do Resort do Lago. Todo cardápio foi estudado para agradar os mais diversos paladares, uma mistura incrível do sabor goiano com um toque de sofisticação e cuidado. <br><br>
+                  Já no frescor da piscina, o bar molhado é uma excelente opção para os amantes de um delicioso petisco, drinks, cervejas, refrigerantes e doses além das mais variadas bebidas nacionais e importadas. Um ambiente descontraído com muita música, risadas, alegria e diversão.
+              </p>
+            </div>
+            <div class="rellax absolute paralax-diversao-2" data-rellax-speed=".7"></div>
+            <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12 wow slideInRight">
+              <owl-carousel [options]="sliderOptionsHalf" [carouselClasses]="['owl-theme', 'row', 'sliding']">
+                <div class="item" *ngFor="let img of sliderGastronomia">
+                  <img [src]="img.src" alt="img.alt">
+                </div>
+              </owl-carousel>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end section parque aquatico -->
+  
+    <section id="lago-corumba" class="slider-100">
+      <div class="slider-full-2">
+        <owl-carousel [options]="sliderOptionsHalf" [carouselClasses]="['owl-theme', 'row', 'sliding']">
+          <div class="item" *ngFor="let img of sliderLago">
+            <img [src]="img.src" alt="img.alt">
+          </div>
+        </owl-carousel>
+      </div>
+      <div class="rellax absolute paralax-diversao-2 paralax-diversao-3" data-rellax-speed=".7"></div>
+      <div class="container">
+        <div class="row">
+          <div class="offset-xl-1 col-xl-10 offset-lg-1 col-lg-10 col-md-12 col-sm-12 col-12">
+            <h2 class="title-brinquedo">Lago Corumbá</h2>
+            <p class="description-brinquedo">
+              O Lago Corumbá é um dos grandes pontos turísticos de Caldas Novas e um lindo cartão postal da cidade. Esse lugar maravilhoso é propício a várias atividades, inclusive estando hospedado no Resort do Lago você tem várias opções para se divertir de forma exclusiva, como: Passeio de lancha, Standup e caiaque. <br>
+              É diversão em meio a natureza que não acaba mais!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end section simulador de surf -->
+  
+    <section class="galeria">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center">
+            <h2 class="title-brinquedo">Galeria de Fotos</h2>
+          </div>
+        </div>
+        <div class="row galeria-div wow fadeIn">
+          <a *ngFor="let image of _album; let i=index" class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12" (click)="open(i)">
+            <img [src]="image.src" class="img-fluid">
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <app-footer></app-footer>

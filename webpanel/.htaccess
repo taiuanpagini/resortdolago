@@ -1,0 +1,9 @@
+RewriteEngine On
+
+### START WWW & HTTPS
+
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://cheff.websiteseguro.com%{REQUEST_URI} [L,R=301]
+
+### END WWW & HTTPS

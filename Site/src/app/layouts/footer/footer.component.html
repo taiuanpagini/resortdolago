@@ -1,0 +1,74 @@
+<footer id="contato">
+	<!-- start acesso rapido -->
+	<section class="acesso-rapido">
+		<div class="container">
+			<div class="row">
+				<div class="offset-xl-2 col-xl-8 offset-lg-1 col-lg-10 offset-md-1 col-md-10 col-sm-12 col-12">
+					<h2 class="title-rodape">Acesso Rápido</h2>
+				</div>
+				<div class="offset-xl-2 col-xl-3 offset-lg-1 col-lg-3 offset-md-1 col-md-3 col-sm-3 col-6">
+					<a routerLink="/resort" class="subtitulo" ng-class="{'active': item.id == states.activeItem}" ng-click="states.activeItem=item.id">O Resort</a>
+					<a routerLink="/resort" fragment="parque-aquatico" class="submenu">Parque Aquático</a>
+					<a routerLink="/resort" fragment="acomodacoes" class="submenu">Acomodações</a>
+					<a routerLink="/resort" fragment="gastronomia" class="submenu">Gastronomia</a>
+					<a routerLink="/resort" fragment="lago-corumba" class="submenu">Lago Corumbá</a>
+					<a routerLink="/diversao-aventura" class="subtitulo" ng-class="{'active': item.id == states.activeItem}" ng-click="states.activeItem=item.id">Diversão e Aventura</a>
+					<a routerLink="/tranquilidade-lazer" class="subtitulo">Tranquilidade e Lazer</a>
+					<a routerLink="/caldas-novas" class="subtitulo">Caldas Novas</a>
+					<a href="#contato" class="subtitulo">Contato</a>
+				</div>
+				<div class="col-xl-3 col-lg-4 col-md-4 col-sm-5 col-6">
+					<div class="row">
+						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+							<a class="subtitulo">Contato</a>
+							<p>
+								Central de Reservas: <br><a href="(64) 3455 3303"> (64) 3455 3303</a> | <a href="(64) 3455 3293"> (64) 3455 3293</a> <br>
+								Central de Relacionamento ao Cliente:  <a href="(62) 3203 4805"> (62) 3203 4805</a> | <a href="(62) 3203 4835"> (62) 3203 4835</a> <br>
+								<a href="mailto:comercial.hotel@resortdolago.com.br" title="envie um email para nossa equipe">comercial.hotel@resortdolago.com.br</a>
+								<br>
+								<a href="mailto:reservas01@resortdolago.com.br" title="envie um email para nossa equipe">reservas01@resortdolago.com.br</a>
+							</p>
+						</div>
+						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+							<a class="subtitulo">Endereço</a>
+							<p>
+								Av. Caminho do Lago s/n Gleba 10-D
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-2 col-lg-3 col-md-3 col-sm-4 col-12">
+					<a class="subtitulo titulo-midias">Redes Sociais</a>
+					<a class="midias">{{ this.getNumber() }}</a>
+					<a href="https://www.facebook.com/resortdolago/" target="_blank" class="midias">/resortdolago</a>
+					<a href="https://www.youtube.com/channel/UCItTDmZUBAXh0UL2ytPyNeg" target="_blank" class="midias">/resortdolago</a>
+					<a href="https://www.instagram.com/resortdolago/" target="_blank" class="midias">@resortdolago</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- end acesso rapido -->
+
+	<!-- start copyright -->
+	<section class="copyright">
+		<div class="container">
+			<div class="row">
+				<div class="offset-xl-2 col-xl-2 offset-lg-1 col-lg-3 offset-md-1 col-md-3 col-sm-4 col-12">
+					<a href="http://www.incorporesolucoes.com.br/" title="site da incorpore" target="_blank"><img src="assets/images/logo-incorpore.png" class="img-fluid"
+						 alt="logo incorpore"></a>
+				</div>
+				<div class="offset-xl-1 col-xl-3 offset-lg-1 col-lg-3 col-md-4 col-sm-4 col-12">
+					<p>
+						Copyright © 2018. Resort do Lago. <br>
+						Todos os Direitos Reservados.
+					</p>
+				</div>
+				<!-- <div class="col-xl-2 col-lg-3 col-md-3 col-sm-4 col-12">
+					<a href="#" title="acesse o portal do multiproprietário" target="_blank"><img src="assets/images/portal-multiproprietario.png"
+						 class="img-fluid mt-3" alt="portal do multiproprietário"></a>
+				</div> -->
+			</div>
+		</div>
+	</section>
+	<!-- end copyright -->
+</footer>

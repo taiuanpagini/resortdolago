@@ -1,0 +1,60 @@
+<div class="loaders">
+	<div class="loader">
+	  <div id="resort"></div>
+	  <span class="text-center txt-loader">Carregando</span>
+	</div>
+</div>
+
+<app-header></app-header>
+
+<main class="promocoes">
+  <section class="title-interno wow fadeInDown">
+    <div class="container-fluid">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center">
+            <h2 class="title-interno">Promoções</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end section title-interno -->
+    
+  <section class="txt-orientacao wow fadeInDownBig">
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+          <h3 class="subtitle">Temos a promoção ideal para você e sua família!</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end section txt-orientacao -->
+
+  <section class="lista-promocoes">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 promo-item wow fadeIn" data-wow-delay=".5s" *ngFor="let promocao of promocoes">          
+          <a [href]="promocao.link">
+            <img [src]="promocao.img" class="img-fluid" [alt]="promocao.nomepromocao">
+            <span class="text-center">
+              A partir de<br>
+              <b>R$ *{{ promocao.apartir }}</b>
+              <b class="plus">+</b>
+            </span>
+            <span class="hover-promo">
+              <b class="obs">*valor por diária/pacote</b>
+              <b class="nome-promocao">{{ promocao.nomepromocao }}</b>
+              <b class="data">{{ promocao.data }}</b>
+              <b class="valor">R$ *{{ promocao.valor }}</b>
+              <b class="btn-reservar"><i class="fas fa-caret-right"></i>Reservar</b>
+            </span>
+          </a>          
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<app-footer></app-footer>

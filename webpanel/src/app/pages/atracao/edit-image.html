@@ -1,0 +1,78 @@
+<div class="main-content">
+    <div class="container-fluid">
+
+        <!--ROW FORM-->
+        <div class="row">
+
+            <div class="col-md-12">
+
+                <div class="card">
+                <form>
+
+                    <div class="card-header card-header-icon card-page-{{this.GlobalService.theme}}">
+                        <i class="material-icons">menu</i>
+                    </div>
+
+                    <div class="card-content">
+                        <h4 class="card-title"><strong>Atualizar imagem</strong> - {{ itemCarregado?.titulo }}</h4>
+
+                        <div class="row">
+
+                            <div class="col-sm-12">
+
+                                <!--SEM FOTO-->
+                                <div class="fileinput fileinput-new text-center col-sm-12 sem-paddig" *ngIf="!itemCarregado?.imgList || itemCarregado?.imgList === null"
+                                data-provides="fileinput">
+                                    <div class="fileinput-new thumbnail">
+                                        <img src="{{itemCarregado?.midia}}">
+                                    </div>
+                                    <div class="fileinput-preview fileinput-exists thumbnail"></div>
+                                    <div>
+                                        <span class="btn btn-{{this.GlobalService.theme}} btn-round btn-file">
+                                        <span class="fileinput-new">Escolher foto</span>
+                                        <span class="fileinput-exists">Alterar</span>
+                                            <input type="hidden"><input type="file" accept="image/*" #inputUploadImgs (change)="selectImgs($event)">
+                                        </span>
+                                        <a class="btn btn-{{this.GlobalService.theme}} btn-round fileinput-exists"
+                                        data-dismiss="fileinput" (click)="removeFoto()"><i class="fa fa-trash"></i></a>
+                                    </div>
+                                </div>                                
+
+                                <!-- <div class="col-sm-12">
+                                    <div class="input-upload" (click)="inputUploadImgs.click()">
+                                        <input type="file" accept="image/*" #inputUploadImgs multiple (change)="selectImgs($event)">
+                                        <i class="material-icons">photo_camera</i>
+                                        <p *ngIf="imgsSelecionadas === null">Selecione as imagens</p>
+                                        <p *ngIf="imgsSelecionadas !== null"><strong>{{imgsSelecionadas.length}} imagem(ns)</strong> selecionada(s)</p>
+                                    </div>
+                                </div> -->
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!--SUBMIT BTN-->
+                    <div class="card-footer">
+                        <div class="col-sm-12 text-right">
+                            <button type="button" (click)="uploadImgs()" class="btn btn-success"
+                            [disabled]="this.GlobalService.inProcessForm">
+                                Atualizar
+                                <i class="material-icons">keyboard_arrow_right</i>
+                            </button><p><br></p>
+                        </div>
+                    </div>
+
+                </form>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <component-back-button></component-back-button>
+            </div>
+
+        </div>
+        <!--ROW FINAL-->
+
+    </div>
+</div>

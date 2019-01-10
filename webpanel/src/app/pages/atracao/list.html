@@ -1,0 +1,109 @@
+<div class="main-content">
+    <div class="container-fluid">
+
+        <!--ROW LIST-->
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-icon card-page-{{this.GlobalService.theme}}">
+                        <i class="material-icons">list</i>
+                    </div>
+                    <div class="card-content">
+
+                        <div class="row">
+                            <!--DATA-TABLE-->
+                            <div *ngIf="itens?.length == 0" class="col-lg-12 col-md-12 col-sm-12 text-center">
+                                Nenhum registro encontrado
+                            </div>
+
+                            <div class="col-lg-4 col-md-4 col-sm-4" *ngFor="let item of itens; let index = i;">
+                                <div class="card card-stats">
+                                    <div class="card-content text-left">
+                                        <div class="col-lg-12 col-md-12 col-sm-12">
+                                            <h4><b>{{ item.titulo }}</b></h4>
+                                            <p class="category">{{ item.descricao }}</p>
+                                            <div class="row mt-3 mb-2">
+                                                <div class="col-lg-5 col-md-5 col-sm-5">
+                                                    <img [src]="item.midia1" class="img-fluid" alt="">
+                                                </div>
+                                                <div class="col-lg-7 col-md-7 col-sm-7">
+                                                    <img [src]="item.midia2" class="img-fluid" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="stats">
+                                            <i class="material-icons">date_range</i> Atualizado em: {{item.updated |
+                                            date:
+                                            'd/M/y -
+                                            HH:mm'}}
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12">
+                                        <a (click)="deleteItem(item.hashID)" class="btn btn-danger float-right mt-0 mr-4">
+                                            <span class="btn-label mr-2">
+                                                <i class="material-icons">delete</i>
+                                            </span>
+                                            Excluir Atração
+                                        </a>
+                                        <a (click)="EditImageItem($event)" class="btn btn-warning float-right mt-0 mr-4">
+                                            <span class="btn-label mr-2">
+                                                <i class="material-icons">edit</i>
+                                            </span>
+                                            Alterar Fotos
+                                        </a>
+                                        <a (click)="editItem(item.hashID)" class="btn btn-{{this.GlobalService.theme}} float-right mt-0 mr-4">
+                                            <span class="btn-label mr-2">
+                                                <i class="material-icons">edit</i>
+                                            </span>
+                                            Editar Item
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--                         
+                        <div *ngIf="itens?.length > 0">                            
+                            <component-data-table
+                                titleTable="{{this.StorageService.getItem('page')}} cadastrados(as)"
+                                [itens]="itens"                            
+                                [itensFilter]="itens"
+                                [headers]="headers"
+                                ordenar="id"
+                                [totalRegistros]="itens.length"
+                                (editEvento)="editItem($event)"
+                                (uploadEvento)="uploadItem($event)"
+                                (editImageEvento)="EditImageItem($event)"
+                                (deleteEvento)="deleteItem($event)"
+                                (desativarEvento)="desativarItem($event)"
+                                (ativarEvento)="ativarItem($event)">
+                            </component-data-table>
+                        </div>                         -->
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <a routerLink="/atracao/novo" class="btn btn-{{this.GlobalService.theme}}">
+                    <span class="btn-label">
+                        <i class="material-icons">playlist_add</i>
+                    </span>
+                    Novo Item
+                </a>
+
+                <a (click)="getItens()" class="btn btn-info">
+                    <span class="btn-label">
+                        <i class="material-icons">refresh</i>
+                    </span>
+                    Atualizar
+                </a>
+            </div>
+
+        </div>
+        <!--FINAL ROW LIST-->
+
+    </div>
+</div>

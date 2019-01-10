@@ -1,0 +1,45 @@
+<div class="pmweb_widget sweet motor-fixed" data-url="//resortdolago.letsbook.com.br/d/" data-tpl="1" data-first-color="#1F8ECB" data-second-color="#ffffff" data-third-color="#1D8099" data-best-rates-color="#ffffff" data-opacity="100" data-destinations-list="true" data-lang="pt-BR"></div>
+<header>
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<nav class="navbar navbar-expand-lg">
+					<a class="navbar-brand" href="/"><img src="assets/images/logo-topo.png" alt="logo resort do lago"></a>
+					<button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+						<i class="fas fa-bars"></i>
+					</button>
+					<div class="collapse navbar-collapse menu-principal ml-auto" id="navbarTogglerDemo02" [ngClass]="{ 'show': navbarOpen }">
+						<ul class="navbar-nav ml-auto">
+							<li class="nav-item">
+								<a class="nav-link" routerLink="/resort" routerLinkActive="active">O Resort</a>
+								<ul class="submenu">
+									<li><a routerLink="/resort" fragment="parque-aquatico" class="animate rand">Parque Aquático</a></li>
+									<li><a routerLink="/resort" fragment="acomodacoes" class="animate rand">Acomodações</a></li>
+									<li><a routerLink="/resort" fragment="gastronomia" class="animate rand">Gastronomia</a></li>
+									<li><a routerLink="/resort" fragment="lago-corumba" class="animate rand">Lago Corumbá</a></li>
+								</ul>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" routerLink="/diversao-aventura" routerLinkActive="active">Diversão & Aventura</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" routerLink="/tranquilidade-lazer" routerLinkActive="active">Tranquilidade & Lazer</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" routerLink="/kids" routerLinkActive="active">Kids</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" routerLink="/caldas-novas" routerLinkActive="active">Caldas Novas</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link animate rand" href="#contato">Contato</a>
+							</li>
+						</ul>
+						<a class="btn btn-sm btn-promocao ml-3" routerLink="/promocoes">Promoções</a>
+						<a class="btn btn-sm btn-reservar ml-3" href="https://resortdolago.letsbook.com.br/" target="_blank">Reservar</a>
+					</div>
+				</nav>
+			</div>
+		</div>
+	</div>
+</header>

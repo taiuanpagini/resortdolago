@@ -1,0 +1,60 @@
+<div class="loaders">
+	<div class="loader">
+	  <div id="resort"></div>
+	  <span class="text-center txt-loader">Carregando</span>
+	</div>
+</div>
+
+<app-header></app-header>
+
+<main class="caldas">
+  <section class="title-interno wow fadeIn">
+    <div class="container-fluid">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center">
+            <h2 class="title-interno">Caldas Novas</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end section title-interno -->
+
+  <section class="slider-100 wow fadeIn">
+    <div class="container">
+      <div class="row text-center">
+        <div class="offset-xl-1 col-xl-10 offset-lg-1 col-lg-10 offset-md-1 col-md-10">
+          <h2 class="title-brinquedo">O Paraíso das Águas Quentes</h2>
+          <p class="description-brinquedo">
+            O coração das águas quentes está localizado bem no Centro Oeste do Brasil e chama-se Caldas Novas!<br><br>
+
+            Com uma população estimada de 89 mil habitantes, Caldas Novas se tornou um grande berço do turismo por conta de suas inúmeras nascentes de Águas Termais.  Nossa cidade recebe mensalmente em média 40 mil turistas podendo chegar até 110 mil nos feriados de réveillon, carnaval e no nacionalmente conhecido Caldas Country Show.<br><br>
+
+            São famílias do mundo todo explorando esta terra de clima tropical e um cerrado riquíssimo.<br><br>
+            
+            E se você pensa que Caldas Novas é só água quente está muito enganado, por toda a cidade você encontra muitos pontos históricos, turísticos e uma gastronomia típica impecável. Fazem parte dos pontos mais visitados a Serra de Caldas, Monumento das Águas, Jardim Japonês, Balneário Municipal, Casarão dos Gonzaga, Feira do Luar, Cachaçaria Vale das Águas Quentes e muitos outros passeios incríveis que vão fazer você se apaixonar por Caldas Novas.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end section halfpipe -->
+    
+  <section class="slider-100">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 wow fadeIn">
+          <owl-carousel [options]="sliderOptionsHalf" [carouselClasses]="['owl-theme', 'row', 'sliding']">
+            <div class="item" *ngFor="let img of sliderCaldas">
+              <img [src]="img.src" [alt]="img.alt">
+            </div>
+          </owl-carousel>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end section passeio de lancha -->
+</main>
+
+<app-footer></app-footer>

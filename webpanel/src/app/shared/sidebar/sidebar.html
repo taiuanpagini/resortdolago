@@ -1,0 +1,52 @@
+<!--SIDE WRAPPER-->
+<div class="sidebar-wrapper" id="area-menu">
+
+    <!--NAVIGATION-->
+    <div class="nav-container">
+    <ul class="nav">
+
+        <li routerLinkActive="active" *ngFor="let menu of menuItems">
+
+            <!--SINGLE MENU-->
+            <a  routerLink="{{menu.path}}" *ngIf="!menu.menuSub" (click)="GlobalService.selectPage(menu.title)">
+                <i class="material-icons">{{menu.icon}}</i>
+                <p>{{menu.title}}</p>
+            </a>
+
+            <!--COLLAPSE MENU-->            
+            <a data-toggle="collapse" href="#{{menu.refSub}}" *ngIf="menu.menuSub">
+                <i class="material-icons">{{menu.icon}}</i>
+                <p>{{menu.title}}
+                    <b class="caret"></b>
+                </p>
+            </a>
+            <div class="collapse" id="{{menu.refSub}}">
+                <ul class="nav">
+
+                    <li routerLinkActive="active" *ngFor="let submenu of menu.submenu">
+                        <a routerLink="{{submenu.path}}" (click)="GlobalService.selectPage(submenu.title)">
+                            <span class="sidebar-mini">{{submenu.title | slice:0:1}}</span>
+                            <span class="sidebar-normal">{{submenu.title}}</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </li>
+
+        <li class="separator"></li>
+
+        <!--SUPORTE TECNICO-->
+        <li class="link-suport">
+            <a class="tipo-link" routerLink="/suporte">
+                <i class="material-icons">headset_mic</i>
+                <p>Suporte Técnico</p>
+            </a>
+        </li>
+
+    </ul>
+    </div>
+    <!--FINAL NAVIGATION-->
+
+</div>
+<!--FINAL SIDE WRAPPER-->

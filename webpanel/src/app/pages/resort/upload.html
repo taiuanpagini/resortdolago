@@ -1,0 +1,213 @@
+<div class="main-content">
+    <div class="container-fluid">
+
+        <!--ROW FORM-->
+        <div class="row">
+
+            <div class="col-md-12">
+
+                <div class="card">
+                <form>
+
+                    <div class="card-header card-header-icon card-page-{{this.GlobalService.theme}}">
+                        <i class="material-icons">menu</i>
+                    </div>
+
+                    <div class="card-content">
+                        <h4 class="card-title"><strong>Adicionar imagem</strong></h4>
+
+                        <div class="row mt-5">
+
+                            <div class="offset-sm-1 col-sm-2">
+
+                                <!--SEM FOTO-->
+                                <div class="fileinput fileinput-new text-center col-sm-12 sem-paddig" *ngIf="!itemCarregado?.imgList || itemCarregado?.imgList === null"
+                                data-provides="fileinput">
+                                    <h4 class="card-title"><strong>Imagens do Parque Aquático</strong></h4>
+                                    <div class="fileinput-new thumbnail">
+                                        <img src="/assets/img/image_placeholder.jpg">
+                                    </div>
+                                    <div class="fileinput-preview fileinput-exists thumbnail"></div>
+                                    <p><strong>Tamanho da Imagem: 1920px x 726px</strong></p>
+                                    <div>
+                                        <span class="btn btn-{{this.GlobalService.theme}} btn-round btn-file">
+                                        <span class="fileinput-new">Escolher foto</span>
+                                        <span class="fileinput-exists">Alterar</span>
+                                            <input type="hidden"><input type="file" accept="image/*" multiple #inputUploadImgs (change)="selectImgs($event)">
+                                        </span>
+                                        <a class="btn btn-{{this.GlobalService.theme}} btn-round fileinput-exists"
+                                        data-dismiss="fileinput" (click)="removeFoto()"><i class="fa fa-trash"></i></a>
+                                    </div>
+                                </div>
+    
+                                <!--FOTO CADASTRADA-->
+                                <div class="col-sm-12 text-center sem-paddig" *ngIf="itemCarregado?.imgList && itemCarregado?.imgList !== null">
+                                    <div *ngIf="itemCarregado?.imgList">
+                                        <img src="{{this.GlobalService.url_imgs}}/banners/{{itemCarregado?.imgList}}" class="img-product">
+                                    </div>
+                                    <a class="btn btn-{{this.GlobalService.theme}} btn-round" (click)="deleteimgList(itemCarregado?.imgList, itemCarregado?.id)">
+                                        <i class="fa fa-trash"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-2">
+
+                                <!--SEM FOTO-->
+                                <div class="fileinput fileinput-new text-center col-sm-12 sem-paddig" *ngIf="!itemCarregado?.imgList2 || itemCarregado?.imgList2 === null"
+                                data-provides="fileinput">
+                                    <h4 class="card-title"><strong>Imagens das Acomodações</strong></h4>
+                                    <div class="fileinput-new thumbnail">
+                                        <img src="/assets/img/image_placeholder.jpg">
+                                    </div>
+                                    <div class="fileinput-preview fileinput-exists thumbnail"></div>
+                                    <p><strong>Tamanho da Imagem: 716px x 647px</strong></p>
+                                    <div>
+                                        <span class="btn btn-{{this.GlobalService.theme}} btn-round btn-file">
+                                        <span class="fileinput-new">Escolher foto</span>
+                                        <span class="fileinput-exists">Alterar</span>
+                                            <input type="hidden"><input type="file" accept="image/*" multiple #inputUploadImgs (change)="selectImgs2($event)">
+                                        </span>
+                                        <a class="btn btn-{{this.GlobalService.theme}} btn-round fileinput-exists"
+                                        data-dismiss="fileinput" (click)="removeFoto2()"><i class="fa fa-trash"></i></a>
+                                    </div>
+                                </div>
+    
+                                <!--FOTO CADASTRADA-->
+                                <div class="col-sm-12 text-center sem-paddig" *ngIf="itemCarregado?.imgList2 && itemCarregado?.imgList2 !== null">
+                                    <div *ngIf="itemCarregado?.imgList2">
+                                        <img src="{{this.GlobalService.url_imgs}}/banners/{{itemCarregado?.imgList2}}" class="img-product">
+                                    </div>
+                                    <a class="btn btn-{{this.GlobalService.theme}} btn-round" (click)="deleteimgList2(itemCarregado?.imgList2, itemCarregado?.id)">
+                                        <i class="fa fa-trash"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-2">
+
+                                <!--SEM FOTO-->
+                                <div class="fileinput fileinput-new text-center col-sm-12 sem-paddig" *ngIf="!itemCarregado?.imgList3 || itemCarregado?.imgList3 === null"
+                                data-provides="fileinput">
+                                <h4 class="card-title"><strong>Imagens do Restaurante</strong></h4>
+                                    <div class="fileinput-new thumbnail">
+                                        <img src="/assets/img/image_placeholder.jpg">
+                                    </div>
+                                    <div class="fileinput-preview fileinput-exists thumbnail"></div>
+                                    <p><strong>Tamanho da Imagem: 716px x 647px</strong></p>
+                                    <div>
+                                        <span class="btn btn-{{this.GlobalService.theme}} btn-round btn-file">
+                                        <span class="fileinput-new">Escolher foto</span>
+                                        <span class="fileinput-exists">Alterar</span>
+                                            <input type="hidden"><input type="file" accept="image/*" multiple #inputUploadImgs (change)="selectImgs3($event)">
+                                        </span>
+                                        <a class="btn btn-{{this.GlobalService.theme}} btn-round fileinput-exists"
+                                        data-dismiss="fileinput" (click)="removeFoto2()"><i class="fa fa-trash"></i></a>
+                                    </div>
+                                </div>
+    
+                                <!--FOTO CADASTRADA-->
+                                <div class="col-sm-12 text-center sem-paddig" *ngIf="itemCarregado?.imgList3 && itemCarregado?.imgList3 !== null">
+                                    <div *ngIf="itemCarregado?.imgList3">
+                                        <img src="{{this.GlobalService.url_imgs}}/banners/{{itemCarregado?.imgList3}}" class="img-product">
+                                    </div>
+                                    <a class="btn btn-{{this.GlobalService.theme}} btn-round" (click)="deleteimgList3(itemCarregado?.imgList3, itemCarregado?.id)">
+                                        <i class="fa fa-trash"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-2">
+
+                                <!--SEM FOTO-->
+                                <div class="fileinput fileinput-new text-center col-sm-12 sem-paddig" *ngIf="!itemCarregado?.imgList4 || itemCarregado?.imgList4 === null"
+                                data-provides="fileinput">
+                                <h4 class="card-title"><strong>Imagens do Lago</strong></h4>
+                                    <div class="fileinput-new thumbnail">
+                                        <img src="/assets/img/image_placeholder.jpg">
+                                    </div>
+                                    <div class="fileinput-preview fileinput-exists thumbnail"></div>
+                                    <p><strong>Tamanho da Imagem: 1920px x 726px</strong></p>
+                                    <div>
+                                        <span class="btn btn-{{this.GlobalService.theme}} btn-round btn-file">
+                                        <span class="fileinput-new">Escolher foto</span>
+                                        <span class="fileinput-exists">Alterar</span>
+                                            <input type="hidden"><input type="file" accept="image/*" multiple #inputUploadImgs (change)="selectImgs4($event)">
+                                        </span>
+                                        <a class="btn btn-{{this.GlobalService.theme}} btn-round fileinput-exists"
+                                        data-dismiss="fileinput" (click)="removeFoto2()"><i class="fa fa-trash"></i></a>
+                                    </div>
+                                </div>
+    
+                                <!--FOTO CADASTRADA-->
+                                <div class="col-sm-12 text-center sem-paddig" *ngIf="itemCarregado?.imgList4 && itemCarregado?.imgList4 !== null">
+                                    <div *ngIf="itemCarregado?.imgList4">
+                                        <img src="{{this.GlobalService.url_imgs}}/banners/{{itemCarregado?.imgList4}}" class="img-product">
+                                    </div>
+                                    <a class="btn btn-{{this.GlobalService.theme}} btn-round" (click)="deleteimgList4(itemCarregado?.imgList4, itemCarregado?.id)">
+                                        <i class="fa fa-trash"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-2">
+
+                                <!--SEM FOTO-->
+                                <div class="fileinput fileinput-new text-center col-sm-12 sem-paddig" *ngIf="!itemCarregado?.imgList5 || itemCarregado?.imgList5 === null"
+                                data-provides="fileinput">
+                                <h4 class="card-title"><strong>Imagens da Galeria</strong></h4>
+                                    <div class="fileinput-new thumbnail">
+                                        <img src="/assets/img/image_placeholder.jpg">
+                                    </div>
+                                    <div class="fileinput-preview fileinput-exists thumbnail"></div>
+                                    <p><strong>Tamanho da Imagem: 1000px x 1000px</strong></p>
+                                    <div>
+                                        <span class="btn btn-{{this.GlobalService.theme}} btn-round btn-file">
+                                        <span class="fileinput-new">Escolher foto</span>
+                                        <span class="fileinput-exists">Alterar</span>
+                                            <input type="hidden"><input type="file" accept="image/*" multiple #inputUploadImgs (change)="selectImgs5($event)">
+                                        </span>
+                                        <a class="btn btn-{{this.GlobalService.theme}} btn-round fileinput-exists"
+                                        data-dismiss="fileinput" (click)="removeFoto2()"><i class="fa fa-trash"></i></a>
+                                    </div>
+                                </div>
+    
+                                <!--FOTO CADASTRADA-->
+                                <div class="col-sm-12 text-center sem-paddig" *ngIf="itemCarregado?.imgList5 && itemCarregado?.imgList5 !== null">
+                                    <div *ngIf="itemCarregado?.imgList5">
+                                        <img src="{{this.GlobalService.url_imgs}}/banners/{{itemCarregado?.imgList5}}" class="img-product">
+                                    </div>
+                                    <a class="btn btn-{{this.GlobalService.theme}} btn-round" (click)="deleteimgList5(itemCarregado?.imgList5, itemCarregado?.id)">
+                                        <i class="fa fa-trash"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!--SUBMIT BTN-->
+                    <div class="card-footer">
+                        <div class="col-sm-12 text-right">
+                            <button type="button" (click)="uploadImgs()" class="btn btn-success"
+                            [disabled]="this.GlobalService.inProcessForm">
+                                Atualizar
+                                <i class="material-icons">keyboard_arrow_right</i>
+                            </button><p><br></p>
+                        </div>
+                    </div>
+
+                </form>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <component-back-button></component-back-button>
+            </div>
+
+        </div>
+        <!--ROW FINAL-->
+
+    </div>
+</div>

@@ -1,0 +1,66 @@
+<!--WRAPPER-->
+<div class="wrapper wrapper-full-page">
+    <div class="full-page login-page">
+
+        <!--CONTENT-->
+        <div class="content">
+            <div class="container">
+
+                <div class="col-md-6 col-md-offset-3">
+                    <form #form="ngForm" (ngSubmit)="this.SessionService.getRecuperarSenha(form)">
+
+                        <div class="card card-login card-hidden" style="margin:0">
+
+                            <!--CARD HEADER-->
+                            <div class="category text-center">
+                                <img [src]="this.GlobalService.imgLogoLogin" class="logo-login">
+                                <p>Para recuperar sua senha, digite seu e-mail abaixo:</p>
+                            </div>
+
+                            <!--CARD CONTENT-->
+                            <div class="card-content">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <i class="material-icons">face</i>
+                                    </span>
+                                    <div class="form-group label-floating">
+                                        <label class="control-label">Usuário</label>
+                                        <input type="text" name="email" required ngModel class="form-control input-{{this.GlobalService.theme}}">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--POST BTN-->
+                            <div class="card-footer text-center" style="border-top:none">
+                                <button type="submit" class="btn btn-{{this.GlobalService.theme}} btn-wd btn-lg"
+                                [disabled]="this.GlobalService.inProcessForm">
+                                    Receber Senha
+                                    <i class="fa fa-circle-o-notch fa-spin fa-fw" *ngIf="this.GlobalService.inProcessForm"></i>
+                                </button>
+                            </div>
+
+                        </div>
+                        <!--FINAL CARD-->
+                    </form>
+                </div>
+                <!--FINAL COL-->
+
+            </div>
+        </div>
+        <!--FINAL CONTENT-->
+
+        <!--FOOTER-->
+        <footer class="footer">
+            <div class="container">
+                <p class="copyright text-center">
+                    &copy; {{dataHoje | date: 'yyyy'}}
+
+                    <a href="http://www.duaspolegadas.com/" target="_blank"><strong>Duas Polegadas</strong></a>
+                    Todos os direitos reservados
+                </p>
+            </div>
+        </footer>
+        <!--FINAL FOOTER-->
+
+    </div>
+</div>

@@ -1,0 +1,247 @@
+<div class="loaders">
+  <div class="loader">
+    <div id="resort"></div>
+    <span class="text-center txt-loader">Carregando</span>
+  </div>
+</div>
+<app-header></app-header>
+<main>
+  <section class="banner">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <!-- BANNER -->
+          <div class="tp-banner-container">
+            <div class="tp-banner">
+              <ul>
+                <li data-transition="fade" data-slotamount="7" data-masterspeed="1500" *ngFor="let banner of banners">
+                  <div class="tp-caption large_bold_grey customout primeira-linha" data-x="-18" data-y="230"
+                    data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                    data-speed="500" data-start="800" data-easing="Back.easeOut" data-endspeed="500" data-endeasing="Power4.easeIn"
+                    data-captionhidden="on" style="z-index: 4">{{ banner.title }}
+                  </div>
+
+                  <div class="tp-caption large_bold_grey customout segunda-linha" data-x="-15" data-y="310"
+                    data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                    data-speed="300" data-start="1100" data-easing="Back.easeOut" data-endspeed="500" data-endeasing="Power4.easeIn"
+                    data-captionhidden="on" style="z-index: 7">{{ banner.subtitle }}
+                  </div>
+
+                  <div class="tp-caption medium_bold_red customout banner-principal" data-x="565" data-y="50"
+                    data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                    data-speed="500" data-start="1200" data-easing="Back.easeOut" data-endspeed="500" data-endeasing="Power4.easeIn"
+                    data-captionhidden="on" style="z-index: 12">
+                    <img [src]="banner.img" [alt]="banner.alt">
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end banner -->
+    </div>
+  </section>
+
+  <!-- start reservas -->
+  <section class="reservas">
+    <div class="rellax absolute paralax-reservas" data-rellax-speed=".7"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-5 col-lg-7 col-md-7 col-sm-12 col-12 bg-form-reserva">
+          <h2>Hospedagem</h2>
+          <h4>*Crianças até 9 anos não pagam. </h4>
+          <div class="pmweb_widget sweet" data-url="//resortdolago.letsbook.com.br/d/" data-tpl="1" data-opacity="100"
+            data-destinations-list="true" data-lang="pt-BR"></div>
+          <div class="leonardo-boia"></div>
+          <div class="dica-leo"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end reservas -->
+
+  <!-- start titulo experiencia -->
+  <section class="experiencia">
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+          <h2>A sua melhor experiência em Férias!</h2>
+          <h3><b>Reserve On Line ou ligue</b>(64) 3455 3303 | (64) 3455 3293</h3>
+          <h4>*Valores sujeitos a disponibilidades e reajustes no ato da reserva sem aviso prévio.</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- start newsletter -->
+  <section class="newsletter">
+    <div class="container">
+      <div class="row">
+        <div class="offset-xl-1 col-xl-10 offset-lg-1 col-lg-10 offset-md-1 col-md-10">
+          <owl-carousel [options]="sliderOptionsPromotions" [carouselClasses]="['owl-theme', 'row', 'sliding']">
+            <div class="item" *ngFor="let promocao of promocoes">
+              <a [href]="promocao.link">
+                <img [src]="promocao.img" class="img-fluid" [alt]="promocao.nomepromocao">
+                <span class="text-center">
+                  A partir de<br>
+                  <b>R$ *{{ promocao.apartir }}</b>
+                  <b class="plus">+</b>
+                </span>
+                <span class="hover-promo">
+                  <b class="obs">*valor por diária/pacote</b>
+                  <b class="nome-promocao">{{ promocao.nomepromocao }}</b>
+                  <b class="data">{{ promocao.data }}</b>
+                  <b class="valor">R$ *{{ promocao.valor }}</b>
+                  <b class="btn-reservar"><i class="fas fa-caret-right"></i>Reservar</b>
+                </span>
+              </a>
+            </div>
+          </owl-carousel>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col text-center">
+          <p>Atendimento Personalizado</p>
+          <form #form="ngForm" (ngSubmit)="form.valid && enviarEmail(form)">
+            <div class="row">
+              <div class="col-xl-5 offset-xl-1">
+                <!-- <input [(ngModel)]="Assunto" type="text" name="Assunto" value="Atendimento Personalizado Pelo Site"> -->
+                <input type="hidden" name="Assunto" [(ngModel)]="model.Assunto">
+                <input type="text" name="Nome" placeholder="digite seu nome" minlength="4" required [(ngModel)]="model.Nome"
+                  #Nome="ngModel" [ngClass]="{ 'is-invalid': form.submitted && Nome.invalid }">
+              </div>
+              <div class="col-xl-5">
+                <input mask="(00)00000-0000" type="text" name="Telefone" placeholder="digite seu telefone " required
+                  [(ngModel)]="model.Telefone" #Telefone="ngModel" [ngClass]="{ 'is-invalid': form.submitted && Telefone.invalid }">
+              </div>
+            </div>
+            <div class="row">
+              <div class="offset-xl-4 col-xl-4">
+                <!-- <button>Receber Ligação</button> -->
+                <button type="submit">
+                  Receber Ligação
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end newsletter -->
+
+  <!-- start video leonardo -->
+  <section class="video">
+    <div class="container">
+      <!-- <div class="row" *ngIf="this.arVideos">
+        <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
+          <h2>{{ this.arVideos[0].titulo }}</h2>
+          <p>
+            {{ this.arVideos[0].descricao }}
+          </p>
+        </div>
+        <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12 container-video">
+          <iframe type="text/html" width="100%" height="515" src="https://www.youtube.com/embed/AHGW5l1-DYE?disablekb=1"
+            frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div> -->
+      <div class="row">
+        <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
+          <h2>O Resort<br>do Lago</h2>
+          <p>
+            O Resort do Lago é o lugar ideal para você aproveitar as férias mais incríveis da sua vida. São 621 apartamentos na beira do Lago Corumbá, um importante ponto turístico de Caldas Novas e apenas 15 minutos do centro da cidade. Sua estadia será repleta de total contato com a natureza e um visual de tirar o fôlego.
+          </p>
+        </div>
+        <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12 container-video">
+          <iframe type="text/html" width="100%" height="515" src="https://www.youtube.com/embed/AHGW5l1-DYE?disablekb=1"
+            frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end video leonardo -->
+
+  <!-- start depoimentos -->
+  <section class="depoimentos">
+    <div class="container">
+      <div class="row">
+        <div class="offset-xl-3 col-xl-4 mt-10 offset-lg-2 col-lg-4 offset-md-1 col-md-4 offset-sm-4 col-sm-8 offset-4 col-8">
+          <h3>Nas redes,</h3>
+          <h4>publique com a hashtag</h4>
+          <h2>#resortdolago</h2>
+          <div class="midias">
+            <a href="https://www.facebook.com/resortdolago/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+            <a href="https://www.instagram.com/resortdolago/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/channel/UCItTDmZUBAXh0UL2ytPyNeg" target="_blank"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="offset-xl-1 col-xl-4 mt-8 offset-lg-1 col-lg-5 offset-md-1 col-md-6 offset-sm-4 col-sm-8 offset-4 col-8">
+          <img src="assets//images/tripadvisor.png" alt="">
+          <owl-carousel [options]="{items: 1, dots: false, nav: true, margin: 120, loop: true}" [carouselClasses]="['owl-theme', 'row', 'sliding']">
+            <div class="item" *ngFor="let depoimento of depoimentos">
+              <p class="description">
+                “{{ depoimento.depoimento }}”
+              </p>
+              <h2 class="nome-pessoa text-right">
+                - {{ depoimento.nomePessoa }}
+              </h2>
+            </div>
+          </owl-carousel>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end depoimentos -->
+
+  <!-- start atrações -->
+  <section class="atracoes">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="rellax absolute paralax-atracoes" data-rellax-speed=".7"></div>
+          <div id="amazingslider-1" style="display:block;position:relative;margin:0 auto;">
+            <ul class="amazingslider-thumbnails" style="display:none;">
+              <li *ngFor="let atracao of atracoes">
+                <img [src]="atracao.logo" [alt]="atracao.name">
+              </li>
+            </ul>
+            <ul class="amazingslider-slides" style="display:none;">
+              <li *ngFor="let atracao of atracoes">
+                <img [src]="atracao.imgBig" alt="<b>{{atracao.name}}</b>{{atracao.description}}">
+              </li>
+            </ul>
+          </div>
+          <div class="rellax absolute paralax-atracoes paralax-atracoes-bottom" data-rellax-speed=".7"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end atrações -->
+
+  <!-- start diversão -->
+  <section class="diversao">
+    <div class="container">
+      <div class="row">
+        <div class="offset-xl-2 col-xl-3 offset-lg-2 col-lg-3 offset-md-1 col-md-3 col-sm-4 col-12 titulo-diversao">
+          <div class="rellax absolute paralax-diversao" data-rellax-speed=".7"></div>
+          <img src="assets/images/titulo-diversao.png" class="img-fluid diversao" alt="">
+        </div>
+        <div class="offset-xl-1 col-xl-4 offset-lg-1 col-lg-4 col-md-5 col-sm-5 col-8">
+          <img src="assets/images/leo-preto-branco.png" class="img-fluid leozinho" alt="">
+        </div>
+        <div class="col-xl-2 col-lg-2 col-md-3 col-sm-3 col-4">
+          <h2>Para<br><b>Colorir</b></h2>
+          <p>Clique e baixe <br>
+            a imagem para se <br>
+            divertir colorindo!
+          </p>
+          <a [routerLink]="'kids'" title="Clique para ver as imagens para download">Download</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end diversão -->
+</main>
+
+<app-footer></app-footer>

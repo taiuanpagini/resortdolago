@@ -1,0 +1,76 @@
+<div class="main-content">
+    <div class="container-fluid">
+
+        <!--ROW FORM-->
+        <div class="row">
+
+            <div class="col-md-12">
+
+                <div class="card">
+                <form #form="ngForm" (ngSubmit)="putItem(form)">
+
+                    <div class="card-header card-header-icon card-page-{{this.GlobalService.theme}}">
+                        <i class="material-icons">menu</i>
+                    </div>
+
+                    <div class="card-content">
+                        <h4 class="card-title">Editar usuário <i class="fa fa-chevron-right icon-cat-edit"></i> <strong>{{itemCarregado?.nome}}</strong></h4>
+
+                        <div class="row">
+
+                            <div class="col-sm-6">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <i class="material-icons">text_fields</i>
+                                    </span>
+                                    <div class="form-group label-floating">
+                                        <label class="control-label">Nome do Usuário
+                                            <small>(obrigatório)</small>
+                                        </label>
+                                        <input name="nome" ngModel="{{itemCarregado?.nome}}" type="text" required class="form-control input-{{this.GlobalService.theme}}">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <i class="material-icons">text_fields</i>
+                                    </span>
+                                    <div class="form-group label-floating">
+                                        <label class="control-label">E-mail
+                                            <small>(obrigatório)</small>
+                                        </label>
+                                        <input name="email" ngModel="{{itemCarregado?.email}}" type="email" required class="form-control input-{{this.GlobalService.theme}}">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!--SUBMIT BTN-->
+                    <div class="card-footer">
+                        <div class="col-sm-12 text-right">
+                            <button type="submit" class="btn btn-success"
+                            [disabled]="this.GlobalService.inProcessForm">
+                                Atualizar Usuário
+                                <i class="material-icons">keyboard_arrow_right</i>
+                            </button><p><br></p>
+                        </div>
+                    </div>
+
+                </form>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <component-back-button></component-back-button>
+            </div>
+
+        </div>
+        <!--ROW FINAL-->
+
+    </div>
+</div>

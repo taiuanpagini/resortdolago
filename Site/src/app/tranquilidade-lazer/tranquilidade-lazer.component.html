@@ -1,0 +1,160 @@
+<div class="loaders">
+	<div class="loader">
+	  <div id="resort"></div>
+	  <span class="text-center txt-loader">Carregando</span>
+	</div>
+</div>
+
+<app-header></app-header>
+
+<main class="tranquilidade">
+  <section class="title-interno wow fadeIn">
+    <div class="container-fluid">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center">
+            <h2 class="title-interno">Tranquilidade & Lazer</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end section title-interno -->
+    
+  <section class="txt-orientacao wow fadeIn">
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+          <h3 class="subtitle">Um lugar paradisíaco para suas férias inesquecíveis</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end section txt-orientacao -->
+
+  <section class="slider-100 wow fadeInUp">
+    <div class="slider-full">
+      <owl-carousel [options]="sliderOptionsHalf" [carouselClasses]="['owl-theme', 'row', 'sliding']">
+        <div class="item" *ngFor="let img of sliderPiscina">
+          <img [src]="img.src" [alt]="img.alt">
+        </div>
+      </owl-carousel>
+    </div>
+    <div class="container">
+      <div class="row text-center">
+        <div class="offset-xl-1 col-xl-10 offset-lg-1 col-lg-10 offset-md-1 col-md-10">
+          <h2 class="title-brinquedo">Piscina de Borda Infinita</h2>
+          <p class="description-brinquedo">
+            Esta piscina de borda infinita com vista privilegiada para o lago é o cartão postal das suas férias, um ambiente de muita tranquilidade e beleza indicado para toda família. Sabe aquela sensação de liberdade em meio a natureza? A Oásis será responsável por esta experiência! 
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end section halfpipe -->
+    
+  <section class="slider-50">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12 wow slideInLeft">
+          <div class="rellax absolute paralax-tranquilidade-1" data-rellax-speed=".7"></div>
+          <owl-carousel [options]="sliderOptionsHalf" [carouselClasses]="['owl-theme', 'row', 'sliding']">
+            <div class="item" *ngFor="let img of sliderPrainha">
+              <img [src]="img.src" [alt]="img.alt">
+            </div>
+          </owl-carousel>
+        </div>
+        <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-12 my-auto wow slideInRight">
+          <h2 class="title-brinquedo">Prainha</h2>
+          <p class="description-brinquedo">
+            Aqui a criançada se diverte! <br>
+            A prainha foi pensada na sua experiência em se sentir na praia estando no Centro Oeste do Brasil. Um ambiente rodeado por muita sombra para que os pequenos possam brincar e construir seus lindos castelos de areia.  Desfrute de momentos inesquecíveis vendo o sorriso do seu filho e apreciando a vista incrível do Lago Corumbá.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end section passeio de lancha -->
+
+  <section class="slider-50">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-12 text-right my-auto wow slideInLeft">
+          <h2 class="title-brinquedo">Sauna & Academia</h2>
+          <p class="description-brinquedo">
+            Se você é daqueles que não abre mão do cuidado com o corpo vai adorar a estrutura das nossas saunas, que trarão um benefício sem igual para sua circulação sanguínea, aliviando todo estresse e melhorando o seu sono.  Já para manter os músculos em ação, temos uma estrutura de academia com todos os aparelhos essenciais para a prática de um bom exercício físico. 
+          </p>
+        </div>
+        <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12 wow slideInRight">
+          <owl-carousel [options]="sliderOptionsHalf" [carouselClasses]="['owl-theme', 'row', 'sliding']">
+            <div class="item" *ngFor="let img of sliderSauna">
+              <img [src]="img.src" [alt]="img.alt">
+            </div>
+          </owl-carousel>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end section parque aquatico -->
+
+  <section class="slider-100">
+    <div class="slider-full-2">
+      <owl-carousel [options]="sliderOptionsHalf" [carouselClasses]="['owl-theme', 'row', 'sliding']">
+        <div class="item" *ngFor="let img of sliderGastronomia">
+          <img [src]="img.src" [alt]="img.alt">
+        </div>
+      </owl-carousel>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="offset-xl-1 col-xl-10 offset-lg-1 col-lg-10 col-md-12 col-sm-12 col-12">
+          <div class="rellax absolute paralax-tranquilidade-2" data-rellax-speed=".7"></div>
+          <h2 class="title-brinquedo">Gastronomia</h2>
+          <p class="description-brinquedo">
+            Com uma variedade de saladas, pratos à lá carte e sobremesas você irá se encantar com a gastronomia do Resort do Lago.  Todo cardápio foi estudado para agradar os mais diversos paladares, uma mistura incrível do sabor goiano com um toque de sofisticação e cuidado.  Já no frescor da piscina, o bar molhado é uma excelente opção para os amantes de um delicioso petisco, drinks, cervejas, refrigerantes e doses das mais variadas bebidas nacionais e importadas. Um ambiente descontraído com muita música, risadas, alegria e diversão. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end section simulador de surf -->
+
+  <section class="slider-50">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12 wow slideInLeft">
+          <owl-carousel [options]="sliderOptionsHalf" [carouselClasses]="['owl-theme', 'row', 'sliding']">
+            <div class="item" *ngFor="let img of sliderAcomodacoes">
+              <img [src]="img.src" [alt]="img.alt">
+            </div>
+          </owl-carousel>
+        </div>
+        <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-12 my-auto wow slideInRight">
+          <div class="rellax absolute paralax-tranquilidade-3" data-rellax-speed=".7"></div>
+          <h2 class="title-brinquedo">Acomodações</h2>
+          <p class="description-brinquedo">
+            Para que suas férias sejam perfeitas, o Resort do lago não economizou nas acomodações. São apartamentos com um ou dois quartos que acomodam até sete pessoas confortavelmente, todos equipados com ar condicionado, cozinha americana e camas super macias e aconchegantes. Do quarto você ainda pode apreciar uma incrível vista do Lago Corumbá na tranquilidade de sua varanda ampla exclusiva.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end section caiaque -->
+
+  <section class="galeria">
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+          <h2 class="title-brinquedo">Galeria de Fotos</h2>
+        </div>
+      </div>
+      <div class="row galeria-div wow fadeIn">
+        <a *ngFor="let image of _album; let i=index" class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12" (click)="open(i)">
+          <img [src]="image.src" class="img-fluid">
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<app-footer></app-footer>

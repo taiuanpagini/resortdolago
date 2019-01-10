@@ -1,0 +1,1000 @@
+$preto: #000000;
+$branco: #FFFFFF;
+$azul-menu: #008ecb;
+$azul-escuro: #0e4e70;
+$laranja: #ff9000;
+$verde: #54a037;
+$verde-claro: #9fb56f;
+$cinza-menu: #dcdcdc;
+$vermelho: #ed563d;
+$vermelho-telha: #b43824;
+$amarelo: #ffe74e;
+$marrom: #493b2e;
+
+@media screen and (max-width: 1500px) {
+    main section.title-interno {
+        background-size: 90% !important;
+    }
+    .paralax-reservas {
+        background-size: 100% !important;
+    }
+}
+@media screen and (max-width: 1470px) {
+    main section.video {
+        min-height: 620px;
+    }
+    main section.slider-100 .owl-carousel .owl-nav button.owl-prev,
+    main section.slider-100 .owl-carousel .owl-nav button.owl-next {
+        top: 190px;
+    }
+}
+
+@media screen and (max-width: 1366px) {
+    .paralax-diversao-6 {
+        bottom: -270px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    header .menu-principal ul li a {
+        font-size: 10pt;
+    }
+    main section.depoimentos {
+        background-size: 110% !important;
+        background-position: -110px 70px;
+    }
+    .paralax-atracoes {
+        bottom: 120px;
+    }
+    .paralax-atracoes-bottom {
+        bottom: -300px;
+        right: -420px;
+    }
+    .paralax-diversao {
+        bottom: -60px;
+    }
+    main section.video h2,
+    main section.video p {
+        padding-left: 10px;
+    }
+    main section.video p {
+        font-size: 10pt;
+    }
+    main section.slider-100 .slider-full.slider-padding .owl-carousel .owl-item,
+    main section.slider-100 .slider-full-2.slider-padding .owl-carousel .owl-item {
+        padding: 0 130px;
+    }
+    .paralax-diversao-6 {
+        bottom: -260px;
+    }
+    .paralax-diversao-4 {
+        left: 750px;
+    }
+    .paralax-diversao-1 {
+        bottom: -30px;
+    }
+    main .tp-simpleresponsive .tp-caption.primeira-linha, main .tp-simpleresponsive .tp-caption.segunda-linha {
+        left: 20px !important;
+    }
+    .tp-bullets {
+        bottom: 310px !important;
+        left: 105px !important;    
+    }
+    main .tp-simpleresponsive .tp-caption.primeira-linha {
+        top: 190px !important;
+    }
+    main .tp-simpleresponsive .tp-caption.segunda-linha {
+        top: 260px !important;    
+    }
+    main .tp-simpleresponsive .tp-caption.banner-principal {
+        left: 600px !important;
+    }
+    main .tp-simpleresponsive .tp-caption.banner-principal img {
+        max-width: 100%;
+        width: inherit !important;
+        height: auto !important;    
+    }
+}
+
+@media screen and (max-width: 1270px) {
+    .tp-bullets {
+        bottom: 310px !important;
+        left: 105px !important;    
+    }
+    main .tp-simpleresponsive .tp-caption.primeira-linha {
+        top: 190px !important;
+    }
+    main .tp-simpleresponsive .tp-caption.segunda-linha {
+        top: 260px !important;    
+    }
+    main .tp-simpleresponsive .tp-caption.banner-principal {
+        left: 600px !important;
+    }
+    main .tp-simpleresponsive .tp-caption.banner-principal img {
+        max-width: 100%;
+        width: inherit !important;
+        height: auto !important;    
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    header .menu-principal {
+        a {
+            &.btn-promocao,
+            &.btn-reservar {
+                display: none;
+            }
+        }
+        ul {
+            li {
+                a {
+                    font-size: 10pt;
+                }
+            }
+        }
+    }
+    .paralax-diversao {
+		left: -370px;
+    	bottom: -62px;
+    }
+    main section.diversao h2 {
+        margin-top: 95px;
+        margin-left: -60px;
+        font-size: 34pt;
+    }
+    .tp-bullets {
+        bottom: 220px !important;
+        left: 85px !important;    
+    }
+    main .tp-simpleresponsive .tp-caption.primeira-linha,
+    main .tp-simpleresponsive .tp-caption.segunda-linha {
+        font-size: 55px !important;
+        left: 0px !important;    
+    }
+    main .tp-simpleresponsive .tp-caption.banner-principal {
+        left: 470px !important;
+    }
+    main section.reservas .bg-form-reserva .leonardo-boia {
+        bottom: -30%;
+        right: -70%;
+        background-size: 70% !important;
+    }
+    main section.reservas .bg-form-reserva .dica-leo {
+        top: 25%;
+        right: -82%;
+    }
+    .owl-carousel.owl-drag .owl-item {
+        min-height: 420px;
+    }
+    .owl-carousel .owl-item span {
+        left: 24%;
+    }
+    .owl-carousel .owl-item span.hover-promo {
+        left: -335px;
+    }
+    .owl-carousel .owl-item:hover span.hover-promo {
+        bottom: 25px;
+    }
+    .owl-carousel .owl-nav button.owl-prev,
+    .owl-carousel .owl-nav button.owl-next, 
+    .owl-carousel button.owl-dot {
+        top: 155px
+    }
+    main section.video {
+        min-height: 550px;
+    }
+    main section.video .container-video {
+        margin-top: 0;
+    }
+    main section.video h2 {
+        font-size: 22pt;
+        margin-top: 70px;
+    }
+    main section.video p {
+        font-size: 11pt;
+    }
+    main section.depoimentos .mt-10 {
+        margin-top: 170px;    
+    }
+    main section.depoimentos .mt-8 {
+        margin-top: 110px;
+    }
+    .amazingslider-bullet-wrapper-1 > div,
+    .amazingslider-bullet-wrapper-1 div div {
+        width: 110px !important;
+    }
+    .amazingslider-car-left-arrow-1,
+    .amazingslider-car-right-arrow-1 {
+        margin-left: 36px !important;
+    }
+    main section.slider-50 .owl-carousel .owl-nav button.owl-prev,
+    main section.slider-50 .owl-carousel .owl-nav button.owl-next {
+        top: 190px;
+    }
+    main.caldas.kids section.slider-100 h3.name-image {
+        margin-top: 60px;
+    }
+    main.caldas.kids section.slider-100 img.leo-original {
+        margin-top: 60px;
+    }
+    main.promocoes section.lista-promocoes .promo-item {
+        height: 380px;
+    }
+    main.promocoes section.lista-promocoes .promo-item span.text-center {
+        left: 20%;
+    }
+    main.promocoes section.lista-promocoes .promo-item:hover span.hover-promo {
+        left: -15px;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .paralax-diversao-4 {
+        top: 60px;
+    }
+    .paralax-diversao {
+        bottom: -162px;
+    }
+    .paralax-atracoes {
+        bottom: 0px;
+    }
+    .paralax-atracoes-bottom {
+        bottom: -260px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    main section.slider-100 .owl-carousel .owl-nav button.owl-prev,
+    main section.slider-100 .owl-carousel .owl-nav button.owl-next {
+        top: 130px;
+    }
+    main section.depoimentos {
+        background-size: 110% !important;
+        background-position: -105px 90px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .navbar-collapse {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        text-align: center;
+        background: $laranja;
+        z-index: 1000;
+    }
+    header .menu-principal ul li {
+        height: inherit;
+        a {
+            font-size: 23pt;
+            color: $branco;
+            &:hover {
+                color: $azul-menu;
+                border: 3px solid transparent;
+            }
+        }
+    }
+    header .menu-principal ul li:hover ul.submenu,
+    header .menu-principal ul li:hover a:before,
+    header .menu-principal ul li:hover a:after  {
+        display: none;
+    }
+    .navbar-toggler {
+        z-index: 2000;
+        color: $azul-menu;
+        &:focus {
+            outline: none;
+        }
+    }
+    main section.diversao h2 {
+        margin-top: 75px;
+        margin-left: -50px;
+    }
+    main .tp-simpleresponsive .tp-caption.primeira-linha,
+    main .tp-simpleresponsive .tp-caption.segunda-linha {
+        font-size: 49px !important;
+        top: 120px !important;
+    }
+    main .tp-simpleresponsive .tp-caption.segunda-linha {
+        top: 180px !important;
+    }
+    main .tp-simpleresponsive .tp-caption.banner-principal {
+        left: 60px !important;
+    }
+    main .tp-simpleresponsive .tp-caption.banner-principal img {
+        max-width: 50%; 
+        float: right;
+    }
+    .tp-bullets {
+        bottom: 170px !important;  
+    }
+    main section.reservas .bg-form-reserva div.pmweb_widget[id^="pmwebwidget"].sweet .pm_checkin, 
+    main section.reservas .bg-form-reserva div.pmweb_widget[id^="pmwebwidget"].sweet .pm_checkout, 
+    main section.reservas .bg-form-reserva div.pmweb_widget[id^="pmwebwidget"].sweet .pm_adults, 
+    main section.reservas .bg-form-reserva div.pmweb_widget[id^="pmwebwidget"].sweet .pm_children {
+        width: 100%;
+        margin-left: 0 !important;
+    }
+    main section.reservas .bg-form-reserva .leonardo-boia {
+        bottom: -21%;
+        right: -90%;
+        background-size: 80% !important;
+    }
+    main section.reservas .bg-form-reserva .dica-leo {
+        top: 35%;
+        right: -105%;
+        background-size: 60% !important;
+    }
+    main section.experiencia h3 b {
+        width: 100%;
+        float: left;
+        margin-bottom: 10px;
+    }
+    .owl-carousel.owl-drag .owl-item {
+        min-height: 350px;
+    }
+    .owl-carousel.owl-drag .owl-item {
+        min-height: auto;
+    }
+    .owl-carousel .owl-item span {
+        left: 17%;
+    }
+    .owl-carousel .owl-nav button.owl-prev,
+    .owl-carousel .owl-nav button.owl-next, 
+    .owl-carousel button.owl-dot {
+        top: 110px
+    }
+    .owl-carousel .owl-item span.text-center {
+        display: none;
+    }
+    .owl-carousel .owl-item span.hover-promo {
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        opacity: 1;
+        padding: 45px 20px 10px;
+    }
+    .owl-carousel .owl-item span.hover-promo b.obs,
+    .owl-carousel .owl-item span.hover-promo b.nome-promocao,
+    .owl-carousel .owl-item span.hover-promo b.data,
+    .owl-carousel .owl-item span.hover-promo b.valor,
+    .owl-carousel .owl-item span.hover-promo b.btn-reservar,
+    .owl-carousel .owl-item span.hover-promo b.btn-reservar i {
+        opacity: 1;
+    }
+    .owl-carousel .owl-item span.hover-promo b.data {
+        font-size: 10pt;
+    }
+    .owl-carousel .owl-item span.hover-promo b.nome-promocao {
+        width: 100%;
+        font-size: 12pt;
+        margin-bottom: 0;
+    }
+    .owl-carousel .owl-item span.hover-promo b.btn-reservar {
+        float: right;
+    }
+    .owl-carousel .owl-item:hover span.hover-promo {
+        bottom: 0;
+        left: 0;
+    }
+    main section.video h2 {
+        margin-top: 0;
+    }
+    main section.depoimentos {
+        background-position: -70px 200px;
+    }
+    main section.depoimentos .midias {
+        padding-left: 15px;    
+    }
+    main section.depoimentos h2 {
+        font-size: 24pt;
+        padding-left: 15px;    
+    }
+    main section.depoimentos h4 {
+        font-size: 13pt;
+        padding-left: 15px;
+    }
+    .amazingslider-bullet-wrapper-1 > div,
+    .amazingslider-bullet-wrapper-1 div div {
+        width: 80px !important;
+    }
+    .amazingslider-car-left-arrow-1,
+    .amazingslider-car-right-arrow-1 {
+        margin-left: 22px !important;
+    }
+    .amazingslider-text-wrapper-1 {
+        width: 40% !important;
+        margin: 34px 0 0 40px !important;    
+    }
+    main section.slider-50 .owl-carousel .owl-nav button.owl-prev,
+    main section.slider-50 .owl-carousel .owl-nav button.owl-next {
+        top: 250px;
+    }
+    main.caldas.kids section.slider-100 h3.name-image {
+        margin-top: 0px;
+    }
+    main.caldas.kids section.slider-100 h4.opcao {
+        font-size: 14pt;
+    }
+    main.caldas.kids section.slider-100 img.leo-original {
+        margin-top: 40px;
+    }
+    main.promocoes section.lista-promocoes .promo-item span.text-center {
+        display: none;
+    }
+    main.promocoes section.lista-promocoes .promo-item {
+        height: auto;
+    }
+    main.promocoes section.lista-promocoes .promo-item span.hover-promo {
+        width: 100%;
+        left: 0;
+        opacity: 1;
+        &:hover {
+            left: 0;
+        }
+    }
+    main.promocoes section.lista-promocoes .promo-item span.hover-promo b.nome-promocao,
+    main.promocoes section.lista-promocoes .promo-item span.hover-promo b.obs,
+    main.promocoes section.lista-promocoes .promo-item span.hover-promo b.data,
+    main.promocoes section.lista-promocoes .promo-item span.hover-promo b.valor,
+    main.promocoes section.lista-promocoes .promo-item span.hover-promo b.btn-reservar,
+    main.promocoes section.lista-promocoes .promo-item span.hover-promo b.btn-reservar i {
+        opacity: 1;
+    }
+    main.promocoes section.lista-promocoes .promo-item span.hover-promo b.btn-reservar {
+        float: right;
+    }
+    main section.title-interno {
+        background-size: initial !important;
+    }
+    main section.slider-100 .slider-full.slider-padding,
+    main section.slider-100 .slider-full-2.slider-padding {
+        padding: 0;
+    }
+    header .menu-principal ul li a.active {
+        color: initial;
+        border: none;
+        border-radius: inherit;
+    }
+    header .menu-principal ul li a.active:after,
+    header .menu-principal ul li a.active:before {
+        display: none;
+    }
+    .paralax-atracoes {
+        bottom: -100px;
+    }
+    .paralax-atracoes-bottom {
+        bottom: -270px;
+    }
+    .paralax-diversao {
+        left: -380px;
+        bottom: -142px;
+    }
+    main section.video h2,
+    main section.video p {
+        padding-left: 0;
+    }
+    main.promocoes section.lista-promocoes .promo-item span.hover-promo b.nome-promocao {
+        width: 100%;
+    }
+    main section.slider-100 .slider-full.slider-padding .owl-carousel .owl-item,
+    main section.slider-100 .slider-full-2.slider-padding .owl-carousel .owl-item {
+        padding: 0;
+    }
+    main section.slider-100 .slider-full.slider-padding .owl-carousel .owl-stage-outer img,
+    main section.slider-100 .slider-full-2.slider-padding .owl-carousel .owl-stage-outer img {
+        border-radius: 0;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    div.pmweb_widget[id^="pmwebwidget"].sweet .pm_wrapper .pm_fields {
+        width: 100% !important;
+    }
+    main section.reservas .bg-form-reserva .leonardo-boia {
+        bottom: -11%;
+        right: -95%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .paralax-diversao {
+        left: -380px;
+        bottom: -165px;
+    }
+    main section.diversao h2 {
+        margin-top: 55px;
+        margin-left: -50px;
+        font-size: 28pt;
+        line-height: 30px;
+    }
+    main section.diversao p {
+        font-size: 9pt;
+        margin-top: 10px;
+    }
+    main section.diversao a {
+        font-size: 8pt;
+    }
+    main section.diversao img.diversao {
+        margin-top: 30px;
+    }
+    main .tp-simpleresponsive .tp-caption.primeira-linha,
+    main .tp-simpleresponsive .tp-caption.segunda-linha {
+        font-size: 35px !important;
+        top: 90px !important;
+    }
+    main .tp-simpleresponsive .tp-caption.segunda-linha {
+        top: 130px !important;
+    }
+    .tp-bullets {
+        bottom: 120px !important; 
+    }
+    main section.reservas .bg-form-reserva .leonardo-boia,
+    main section.reservas .bg-form-reserva .dica-leo {
+        display: none;
+    }
+    .owl-carousel.owl-drag .owl-item {
+        min-height: 325px;
+    }
+    .owl-carousel .owl-item span {
+        left: 13%;
+    }
+    .owl-carousel .owl-nav button.owl-prev,
+    .owl-carousel .owl-nav button.owl-next, 
+    .owl-carousel button.owl-dot {
+        top: 90px
+    }
+    main section.depoimentos {
+        padding-bottom: 65px;
+        background-size: 100% !important;
+        background-position: 0 280px;
+    }
+    main section.depoimentos .mt-10 {
+        margin-top: 100px;
+    }
+    main section.depoimentos .mt-8 {
+        margin-top: 40px;
+    }
+    .amazingslider-bullet-wrapper-1 > div,
+    .amazingslider-bullet-wrapper-1 div div {
+        width: 60px !important;    
+    }
+    .amazingslider-bullet-wrapper-1 > div {
+        margin: 54px 0 !important;
+    }
+    .amazingslider-car-left-arrow-1,
+    .amazingslider-car-right-arrow-1 {
+        margin-left: 14px !important;    
+    }
+    main section.slider-100 .owl-carousel .owl-nav button.owl-prev,
+    main section.slider-100 .owl-carousel .owl-nav button.owl-next {
+        top: 70px;
+    }
+    main section.slider-50 .owl-carousel .owl-nav button.owl-prev,
+    main section.slider-50 .owl-carousel .owl-nav button.owl-next {
+        top: 170px;
+    }
+    main.caldas.kids section.slider-100 a.title-impressao {
+        font-size: 23pt;
+    }
+    main.caldas.kids section.slider-100 h3.name-image {
+        margin-top: 80px;
+    }
+    main.caldas.kids section.slider-100 h4.opcao {
+        font-size: 12pt;
+        margin-top: 10px;
+    }
+    main.promocoes section.lista-promocoes .promo-item span.hover-promo {
+        padding-top: 35px;
+    }
+    main.promocoes section.lista-promocoes .promo-item span.hover-promo b.nome-promocao {
+        font-size: 15pt;
+    }
+    main.promocoes section.lista-promocoes .promo-item span.hover-promo b.data,
+    main.promocoes section.lista-promocoes .promo-item span.hover-promo b.valor {
+        padding: 0;
+    }
+    main.promocoes section.lista-promocoes .promo-item:hover span.hover-promo {
+        left: 0;
+    }
+    .paralax-reservas {
+        display: none;
+    }
+    .amazingslider-text-wrapper-1 {
+        width: 50% !important;
+    }
+    .owl-carousel .owl-item span.hover-promo b.data {
+        font-size: 9pt;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    main section.reservas .bg-form-reserva div.pmweb_widget[id^="pmwebwidget"].sweet .pm_links {
+        margin-top: 0;
+    }
+    .owl-carousel .owl-nav button.owl-next {
+        right: -30px;
+    }
+    .owl-carousel .owl-nav button.owl-prev {
+        left: -30px;
+    }
+    main section.reservas {
+        min-height: auto;
+    }
+    .amazingslider-text-wrapper-1 {
+        display: none !important;
+    }
+    .amazingslider-slider-1 {
+        left: 20% !important;
+        width: 80% !important;
+    }
+    .amazingslider-bullet-wrapper-1 > div {
+        margin: 38px 0 !important;
+    }
+    .amazingslider-bullet-wrapper-1 > div,
+    .amazingslider-bullet-wrapper-1 div div {
+        width: 85px !important;
+    }
+    .amazingslider-car-left-arrow-1,
+    .amazingslider-car-right-arrow-1 {
+        margin-left: 27px !important;
+    }
+    main section.reservas .bg-form-reserva div.pmweb_widget[id^=pmwebwidget].sweet .pm_submit_btn {
+        width: 100%;
+    }
+    .paralax-diversao,
+    .paralax-atracoes,
+    .paralax-atracoes-bottom {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .owl-carousel .owl-item span.hover-promo b.nome-promocao {
+        font-size: 22pt;
+        margin-bottom: 10px;
+    }
+    .owl-carousel .owl-item span.hover-promo b.data {
+        font-size: 14pt;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    main .tp-simpleresponsive .tp-caption.primeira-linha,
+    main .tp-simpleresponsive .tp-caption.segunda-linha {
+        left: 15px !important;
+    }
+    main .tp-simpleresponsive .tp-caption.banner-principal {
+        margin-right: 15px;
+    }
+    .paralax-diversao {
+        left: -210px;
+        bottom: 180px;    
+    }
+    main section.diversao img.diversao {
+        margin: 0 auto 60px;
+        display: table;    
+    }
+    main section.diversao h2 {
+        margin-top: 120px;
+        font-size: 36pt;
+        line-height: 38px;    
+    }
+    main section.diversao p {
+        font-size: 11pt;
+        margin-top: 15px;    
+    }
+    main section.diversao a {
+        font-size: 10pt;
+    }
+	footer section.copyright p {
+		text-align: center;
+	}
+	footer section.acesso-rapido a.midias {
+		width: initial;
+		margin-right: 20px
+	}
+	footer section.acesso-rapido a.titulo-midias {
+		margin-top: 40px;
+    }
+    .owl-carousel.owl-drag .owl-item {
+        min-height: inherit;
+    }
+    .owl-carousel .owl-nav button.owl-prev,
+    .owl-carousel .owl-nav button.owl-next,
+    .owl-carousel button.owl-dot {
+        top: 1.8em;
+        color: $laranja;
+        font-size: 80px;
+    }
+    .owl-carousel .owl-nav button.owl-prev {
+        left: 40px;
+    }
+    .owl-carousel .owl-nav button.owl-next {
+        right: 40px;
+    }
+    .owl-carousel .owl-item span.hover-promo {
+        display: block;
+        padding-top: 65px;
+        left: 0;
+        bottom: 0
+    }
+    .owl-carousel .owl-item:hover span.hover-promo {
+        bottom: 0;
+    }
+    main section.depoimentos {
+        background-size: 130% !important;
+        background-position: -60px 280px;
+    }
+    main section.depoimentos .mt-8 .owl-carousel .owl-nav button.owl-prev,
+    main section.depoimentos .mt-8 .owl-carousel .owl-nav button.owl-next {
+        font-size: 33pt;
+    }
+    main section.slider-100 .owl-carousel .owl-nav button.owl-prev,
+    main section.slider-100 .owl-carousel .owl-nav button.owl-next {
+        top: 60px;
+        left: 0;
+    }
+    main section.slider-100 .owl-carousel .owl-nav button.owl-next {
+        left: inherit;
+        right: 0;
+    }
+    main.promocoes section.lista-promocoes .promo-item span.hover-promo b.nome-promocao {
+        font-size: 20pt;
+    }
+    main.promocoes section.lista-promocoes .promo-item span.hover-promo {
+        padding-top: 75px;
+    }
+    main.promocoes section.lista-promocoes .promo-item span.hover-promo b.btn-reservar {
+        font-size: 13pt;
+    }
+    main.promocoes section.lista-promocoes .promo-item span.hover-promo b.btn-reservar i {
+        font-size: 15pt;
+    }
+    .tp-bullets {
+        left: 100px !important;
+    }
+}
+
+@media screen and (max-width: 545px) {
+    main .tp-simpleresponsive .tp-caption.primeira-linha,
+    main .tp-simpleresponsive .tp-caption.segunda-linha {
+        font-size: 32px !important;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    main.caldas.kids section.slider-100 a.title-impressao {
+        font-size: 19pt;
+        line-height: 18px;
+    }
+    main.caldas.kids section.slider-100 a.download {
+        font-size: 17pt;
+    }
+}
+
+@media screen and (max-width: 515px) {
+    main section.diversao h2 {
+        margin-top: 130px;
+        font-size: 26pt;
+        line-height: 28px;    
+    }
+    main section.diversao p {
+        font-size: 9pt;
+        line-height: 15px;    
+    }
+    main section.diversao a {
+        font-size: 8pt;    
+    }
+}
+
+@media screen and (max-width: 500px) {
+    main section.diversao h2 {
+        margin-top: 100px;
+    }
+    main .tp-simpleresponsive .tp-caption.primeira-linha,
+    main .tp-simpleresponsive .tp-caption.segunda-linha {
+        font-size: 32px !important;
+        top: 80px !important;
+    }
+    main .tp-simpleresponsive .tp-caption.segunda-linha {
+        top: 110px !important;
+    }
+    .tp-bullets {
+        bottom: 110px !important;
+    }
+    main section.depoimentos {
+        background-size: 110% !important;
+        background-position: -30px 300px;
+    }
+    main section.slider-100 .owl-carousel .owl-nav button.owl-prev,
+    main section.slider-100 .owl-carousel .owl-nav button.owl-next {
+        top: 40px;
+    }
+    main section.slider-50 .owl-carousel .owl-nav button.owl-prev,
+    main section.slider-50 .owl-carousel .owl-nav button.owl-next {
+        top: 130px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .amazingslider-bullet-wrapper-1 > div,
+    .amazingslider-bullet-wrapper-1 div div {
+        width: 75px !important;
+    }
+    .amazingslider-car-left-arrow-1,
+    .amazingslider-car-right-arrow-1 {
+        margin-left: 19px !important;
+    }
+}
+@media screen and (max-width: 460px) {
+    main.caldas.kids section.slider-100 h3.name-image {
+        margin-bottom: 3px;
+    }
+    main.caldas.kids section.slider-100 a.title-impressao {
+        font-size: 16pt;
+        line-height: 12px;
+    }
+    main.caldas.kids section.slider-100 h4.opcao {
+        font-size: 10pt;
+        margin-top: 5px;
+    }
+}
+
+@media screen and (max-width: 445px) {
+	footer section.acesso-rapido .col-6 {
+		flex: 0 0 100%;
+		max-width: 100%;
+		margin-bottom: 40px;
+	}
+	footer section.acesso-rapido a.titulo-midias {
+		margin-top: 0;
+	}
+    .owl-carousel .owl-nav button.owl-prev,
+    .owl-carousel .owl-nav button.owl-next,
+    .owl-carousel button.owl-dot {
+        top: 1.2em;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    main section.diversao h2 {
+        margin-top: 80px;
+    }
+    main .tp-simpleresponsive .tp-caption.primeira-linha,
+    main .tp-simpleresponsive .tp-caption.segunda-linha {
+        font-size: 23px !important;
+        top: 65px !important;
+    }
+    main .tp-simpleresponsive .tp-caption.segunda-linha {
+        top: 90px !important;
+    }
+    .tp-bullets {
+        bottom: 90px !important;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    main section.depoimentos {
+        background-size: 110% !important;
+        background-position: -20px 400px;
+    }
+    main.caldas.kids section.slider-100 a.title-impressao {
+        font-size: 14pt;
+    }
+    main.caldas.kids section.slider-100 h4.opcao {
+        font-size: 9pt;
+    }
+    .amazingslider-bullet-wrapper-1 > div,
+    .amazingslider-bullet-wrapper-1 div div {
+        width: 60px !important;
+    }
+    .amazingslider-car-left-arrow-1,
+    .amazingslider-car-right-arrow-1 {
+        margin-left: 14px !important;
+    }
+    .amazingslider-bullet-wrapper-1 > div {
+        margin: 27px 0 !important;
+    }
+    main .tp-simpleresponsive .tp-caption.primeira-linha,
+    main .tp-simpleresponsive .tp-caption.segunda-linha {
+        top: 45px !important;
+    }
+    main .tp-simpleresponsive .tp-caption.segunda-linha {
+        top: 70px !important;
+    }
+    .tp-bullets {
+        bottom: 80px !important;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    main section.diversao h2 {
+        margin-top: 60px;
+        font-size: 22pt;
+        line-height: 25px;
+    }
+    main section.diversao p {
+        font-size: 7pt;
+        line-height: 12px;
+    }
+    .owl-carousel .owl-nav button.owl-prev,
+    .owl-carousel .owl-nav button.owl-next,
+    .owl-carousel button.owl-dot {
+        top: .3em;
+    }
+    main section.depoimentos h2 {
+        line-height: 10px;
+        font-size: 19pt;
+    }
+    main section.depoimentos h4 {
+        font-size: 11pt;
+    }
+    main section.depoimentos h3 {
+        font-size: 20pt;
+        line-height: 7px;    
+    }
+    main section.slider-50 .owl-carousel .owl-nav button.owl-prev,
+    main section.slider-50 .owl-carousel .owl-nav button.owl-next {
+        top: 90px;
+    }
+    main section.reservas .bg-form-reserva h2 {
+        font-size: 32pt;
+    }
+    .owl-carousel .owl-item span.hover-promo b.nome-promocao {
+        font-size: 20pt;
+    }
+    .owl-carousel .owl-item span.hover-promo b.data {
+        font-size: 12pt;
+    }
+}
+
+@media screen and (max-width: 345px) {
+    main section.depoimentos {
+        background: none;
+    }
+    main section.depoimentos .mt-10 {
+        margin-left: 0;
+    }
+    main section.depoimentos .mt-8 {
+        margin-left: 0;
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+    .owl-carousel .owl-item span.hover-promo {
+        padding-top: 45px;
+    }
+}
+
+@media screen and (max-width: 310px) {
+    main section.depoimentos {
+        background-size: 400% !important;    
+    }
+    main section.depoimentos h2 {
+        line-height: 4px;
+        font-size: 14pt;
+        padding-left: 5px;    
+    }
+    main section.depoimentos h4 {
+        font-size: 9pt;
+        padding-left: 5px;
+    }
+    main section.depoimentos h3 {
+        font-size: 17pt;
+        line-height: 7px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .owl-carousel .owl-item span.hover-promo {
+        padding-top: 65px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .owl-carousel .owl-item span.hover-promo {
+        padding-top: 45px;
+    }
+}

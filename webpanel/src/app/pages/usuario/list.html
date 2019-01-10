@@ -1,0 +1,57 @@
+<div class="main-content">
+    <div class="container-fluid">
+
+        <!--ROW LIST-->
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-icon card-page-{{this.GlobalService.theme}}">
+                        <i class="material-icons">list</i>
+                    </div>
+                    <div class="card-content">
+
+                        <!--DATA-TABLE-->
+                        <div *ngIf="this.GlobalService.notItens" class="text-center">
+                            Nenhum registro encontrado
+                        </div>
+                        <div *ngIf="itens?.length > 0">
+                        <component-data-table
+                            titleTable="{{this.StorageService.getItem('page')}} cadastrados(as)"
+                            [itens]="itens"
+                            [itensFilter]="itens"
+                            [headers]="headers"
+                            ordenar="name"
+                            [totalRegistros]="itens.length"
+                            (editEvento)="editItem($event)"
+                            (deleteEvento)="deleteItem($event)"
+                            (desativarEvento)="desativarItem($event)"
+                            (ativarEvento)="ativarItem($event)">
+                        </component-data-table>
+                        </div>                        
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <a routerLink="/usuario/novo" class="btn btn-{{this.GlobalService.theme}}">
+                    <span class="btn-label">
+                        <i class="material-icons">playlist_add</i>
+                    </span>
+                    Novo Item
+                </a>
+
+                <a (click)="getItens()" class="btn btn-info">
+                    <span class="btn-label">
+                        <i class="material-icons">refresh</i>
+                    </span>
+                    Atualizar
+                </a>
+            </div>
+
+        </div>
+        <!--FINAL ROW LIST-->
+
+    </div>
+</div>

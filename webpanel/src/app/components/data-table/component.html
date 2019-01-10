@@ -1,0 +1,347 @@
+<!--BUSCA-->
+<div class="col-md-5 pull-right margin-generate nopadding" *ngIf="exibeFerramentas">
+    <div class="input-group">
+        <span class="input-group-addon">
+            <i class="fa fa-search"></i>
+        </span>
+        <input type="text" id="busca" name="busca" ngModel class="form-control" placeholder="Pesquisar" (keyup)='searchFilter($event)'>
+        <span class="input-group-addon links-padding" style="padding:0;">
+            <!-- <i class="fa fa-sliders tipo-link btn btn-sm btn-info" tooltip="Filtrar registros" placement="top" (click)="changeFiltro()"></i> -->
+            <i class="fa fa-file-excel-o tipo-link btn btn-sm btn-success" tooltip="Gerar lista XLS" placement="top" (click)="this.HttpService.gerarXLS(itensFilter)"></i>
+            <i class="fa fa-file-pdf-o tipo-link btn btn-sm btn-danger" tooltip="Gerar lista PDF" placement="top" (click)="this.HttpService.gerarPDF(itensFilter)"></i>
+            <i class="fa fa-code tipo-link btn btn-sm btn-info" tooltip="Gerar lista XML" placement="top" (click)="this.HttpService.gerarXML(itensFilter)"></i>
+            <!-- <i *ngIf="exibeCheck" class="fa fa-plug tipo-link btn btn-sm btn-info" tooltip="Integrar lista" placement="top" (click)="importSelectBox()"></i> -->
+        </span>
+    </div>
+</div>
+
+<div class="col-md-6" *ngIf="exibeTitle">
+
+    <!--TITULO-->
+    <h4 class="card-title">
+        <strong>{{titleTable}}</strong>
+    </h4>
+
+    <!--FILTRO-->
+    <div *ngIf="exibeFiltro" class="bg-filter">
+        Exibe filtro ativo
+
+        <a (click)="changeFiltro()" class="btn btn-danger">
+            Cancelar
+        </a>
+    </div>
+
+
+</div>
+
+<div class="col-md-12">
+
+<!--DATATABLE-->
+<div class="table-responsive">
+    <table class="table table-striped">
+
+        <thead>
+            <tr>
+
+                <!--HEADERS-->
+                <th *ngIf="exibeCheck">
+                    <!--<div class="checkbox">
+                        <label>
+                            <input type="checkbox" [checked]="selectTodos" (change)="selectTodos = !selectTodos; selectAll($event)">
+                        </label>
+                    </div>-->
+                </th>
+                <th *ngFor="let coluna of headers">
+                    <div (click)="sortBy(coluna)"
+                        *ngIf="coluna !== 'id'
+                        && coluna !== 'id_cliente'
+                        && coluna !== 'hash_cliente'
+                        && coluna !== 'hashID'
+                        && coluna !== 'ref'
+                        && coluna !== 'active'
+                        && coluna !== 'status'
+                        && coluna !== 'sts'
+                        && coluna !== 'link'
+                        && coluna !== 'midia'
+                        && coluna !== 'print_item'
+                        && coluna !== 'print_ip'
+                        && coluna !== 'is_promotion'
+                        && coluna !== 'vl_promotion'
+                        && coluna !== 'vl_rate_promotion'">
+                        {{coluna}}
+                        <i class="fa fa-sort icon-filter no-filter" *ngIf="ordenar !== coluna"></i>
+                        <i class="fa fa-sort-desc icon-filter" *ngIf="!reverse && ordenar === coluna"></i>
+                        <i class="fa fa-sort-asc icon-filter" *ngIf="reverse && ordenar === coluna"></i>
+                    </div>
+                    <div
+                        *ngIf="coluna === 'id'
+                        || coluna === 'active'
+                        || coluna === 'status'
+                        || coluna === 'sts'
+                        || coluna === 'link'">
+                        {{coluna}}
+                    </div>
+                    <div
+                        *ngIf="coluna === 'ref'">
+                        {{coluna}}
+                    </div>
+                </th>
+                <th class="text-right" *ngIf="exibeAcoes">Ações</th>
+
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <!--LINHAS-->
+            <!--<tr *ngFor="let linha of itensFilter | orderBy: ordenar:reverse:'case-insensitive' | paginate: { itemsPerPage: itemsPerPage, currentPage: page}; let i = index"></tr>-->
+            <tr *ngFor="let linha of itensFilter | paginate: { itemsPerPage: itemsPerPage, currentPage: page}; let i = index">
+
+                <!--CELULAS-->
+                <td *ngIf="exibeCheck">
+                    <div class="checkbox"
+                    *ngIf="(linha['status'] !== 'INATIVO')
+                    && (linha['status'] !== 'INDISPONIVEL')
+                    && (linha['status'] !== 'BLOQUEADO')
+                    && (linha['status'] !== 'FECHADO')
+                    && (linha['status'] !== 'FECHADA')
+                    && (linha['status'] !== 'CANCELADO')
+                    && (linha['status'] !== 'CANCELADA')">
+                        <label>
+                            <input type="checkbox" value="{{linha[fieldCheck]}}" (change)="selectCheckItem($event, fieldCheck)" [checked]="selectTodos">
+                        </label>
+                    </div>
+                </td>
+                <td *ngFor="let valor of headers">
+
+                    <!--CARREGANDO MIDIAS-->
+                    <div *ngIf="valor === 'ref'">
+                        <img class="img-datatable" src="{{linha['midia']}}">
+                    </div>
+
+                    <!--OCULTANDO ID-->                    
+                    <div *ngIf="valor === 'id'">#</div>
+
+                    <!--OCULTANDO COLUNAS-->
+                    <div
+                        *ngIf="valor !== 'id'
+                        && valor !== 'id_cliente'
+                        && valor !== 'hash_cliente'
+                        && valor !== 'hashID'
+                        && valor !== 'ref'
+                        && valor !== 'active'
+                        && valor !== 'status'
+                        && valor !== 'sts'
+                        && valor !== 'link'
+                        && valor !== 'midia'
+                        && valor !== 'print_item'
+                        && valor !== 'print_ip'
+
+                        && valor !== 'is_promotion'
+                        && valor !== 'vl_promotion'
+                        && valor !== 'vl_rate_promotion'
+                        
+                        && valor !== 'custo'
+                        && valor !== 'venda'
+                        && valor !== 'valor'
+                        && valor !== 'total'
+                        && valor !== 'taxa'
+                        && valor !== 'couvert'
+                        && valor !== 'recebido'
+                        && valor !== 'troco'
+                        && valor !== 'entrega'
+                        && valor !== 'credito'
+                        && valor !== 'pago'
+                        && valor !== 'data'
+                        && valor !== 'inicio'
+                        && valor !== 'fim'
+                        && valor !== 'vencimento'" [innerHTML]="linha[valor] | sanitizeHtml">{{linha[valor]}}</div>                    
+
+                    <!--VALORES MONETARIOS-->
+                    <div
+                        *ngIf="valor === 'custo'
+                        || valor === 'venda'
+                        || valor === 'valor'
+                        || valor === 'total'
+                        || valor === 'taxa'
+                        || valor === 'couvert'
+                        || valor === 'recebido'
+                        || valor === 'troco'
+                        || valor === 'entrega'
+                        || valor === 'credito'
+                        || valor === 'pago'">{{linha[valor] | currency:'BRL':'1.2-2'}}</div>
+
+                    <!--VALORES DATA HORA-->
+                    <div *ngIf="valor === 'data' || valor === 'inicio' || valor === 'fim'">{{linha[valor] | date: 'dd/MM/yyyy'}}</div>
+
+                    <!--VALORES DATA-->                    
+                    <div *ngIf="valor === 'vencimento'">{{linha[valor] | date: 'dd/MM/yyyy'}}</div>
+
+                    <!--EXIBINDO STATUS ACTIVE/INACTIVE/BUSY-->
+                    <img src="/assets/img/active.png" class="icon-status"
+                        *ngIf="(valor === 'status' && linha[valor] === 'ATIVO')
+                        || (valor === 'status' && linha[valor] === 'LIVRE')
+                        || (valor === 'status' && linha[valor] === 'DISPONIVEL')
+                        || (valor === 'status' && linha[valor] === 'DESBLOQUEADO')
+                        || (valor === 'status' && linha[valor] === 'ABERTO')
+                        || (valor === 'status' && linha[valor] === 'ABERTA')
+                        || (valor === 'sts' && linha[valor] === 'A')">
+
+                    <img src="/assets/img/inactive.png" class="icon-status"
+                    *ngIf="(valor === 'status' && linha[valor] === 'INATIVO')
+                    || (valor === 'status' && linha[valor] === 'INDISPONIVEL')
+                    || (valor === 'status' && linha[valor] === 'BLOQUEADO')
+                    || (valor === 'status' && linha[valor] === 'FECHADO')
+                    || (valor === 'status' && linha[valor] === 'FECHADA')
+                    || (valor === 'status' && linha[valor] === 'CANCELADO')
+                    || (valor === 'status' && linha[valor] === 'CANCELADA')
+                    || (valor === 'sts' && linha[valor] === 'u')">
+
+                    <img src="/assets/img/busy.png" class="icon-status"
+                    *ngIf="(valor === 'status' && linha[valor] === 'OCUPADO')
+                    || (valor === 'status' && linha[valor] === 'EM USO')
+                    || (valor === 'sts' && linha[valor] === 'B')">
+
+                    <!--EXIBINDO LINK-->
+                    <div *ngIf="valor === 'link'" class="links-padding links-default">
+                        <a [href]="linha.link" target="_blank" tooltip="Abrir link" placement="top">
+                            <i class="fa fa-link"></i>
+                        </a>
+                    </div>
+
+                </td>
+
+                <!--ACTIONS-->
+                <td *ngIf="exibeAcoes" width="230">
+                    <ul class="actions_links">
+
+                        <!--DESLIGAR-->
+                        <li *ngIf="linha.host === '121.122.123.2'
+                            || linha.host === '121.122.123.3'
+                            || linha.host === '121.122.123.4'
+                            || linha.host === '121.122.123.5'
+                            || linha.host === '121.122.123.6'
+                            || linha.host === '121.122.123.7'
+                            || linha.host === '121.122.123.8'
+                            || linha.host === '121.122.123.9'
+                            || linha.host === '121.122.123.10'
+                            || linha.host === '121.122.123.11'
+                            || linha.host === '121.122.123.12'
+                            || linha.host === '121.122.123.13'
+                            || linha.host === '121.122.123.14'
+                            || linha.host === '121.122.123.15'
+                            || linha.host === '121.122.123.16'
+                            || linha.host === '121.122.123.17'
+                            || linha.host === '121.122.123.18'
+                            || linha.host === '121.122.123.19'
+                            || linha.host === '121.122.123.20'">
+                            <a (click)="delete(i)" tooltip="Desligar" placement="left">
+                                <i class="fa fa-power-off"></i>
+                            </a>
+                        </li>
+
+                        <!--REINICIAR-->
+                        <li *ngIf="linha.host === '121.122.123.2'
+                            || linha.host === '121.122.123.3'
+                            || linha.host === '121.122.123.4'
+                            || linha.host === '121.122.123.5'
+                            || linha.host === '121.122.123.6'
+                            || linha.host === '121.122.123.7'
+                            || linha.host === '121.122.123.8'
+                            || linha.host === '121.122.123.9'
+                            || linha.host === '121.122.123.10'
+                            || linha.host === '121.122.123.11'
+                            || linha.host === '121.122.123.12'
+                            || linha.host === '121.122.123.13'
+                            || linha.host === '121.122.123.14'
+                            || linha.host === '121.122.123.15'
+                            || linha.host === '121.122.123.16'
+                            || linha.host === '121.122.123.17'
+                            || linha.host === '121.122.123.18'
+                            || linha.host === '121.122.123.19'
+                            || linha.host === '121.122.123.20'">
+                            <a (click)="view(i)" tooltip="Reiniciar" placement="left">
+                                <i class="fa fa-history"></i>
+                            </a>
+                        </li>
+
+                        <li *ngIf="linha.descricao === 'CAIXA DIARIO'">
+                            <a (click)="view(linha.hashID)" tooltip="Reutilizar" placement="left">
+                                <i class="fa fa-refresh"></i>
+                            </a>
+                        </li>
+                        <li *ngIf="exibeDesativa && linha.descricao !== 'CAIXA DIARIO' && linha.tipo !== 'CONTAS' && linha.sts == 'A'">
+                            <a (click)="desativar(linha.hashID)" tooltip="Desativar" placement="left">
+                                <i class="fa fa-check"></i>
+                            </a>
+                        </li>
+                        <li *ngIf="exibeAtiva && linha.descricao !== 'CAIXA DIARIO' && linha.tipo !== 'CONTAS' && linha.sts == 'u'">
+                            <a (click)="ativar(linha.hashID)" tooltip="Ativar" placement="left">
+                                <i class="fa fa-check fa-ativa"></i>
+                            </a>
+                        </li>
+                        <li *ngIf="exibeDelete && linha.descricao !== 'CAIXA DIARIO' && linha.tipo !== 'CONTAS'">
+                            <a (click)="delete(linha.hashID)" tooltip="Excluir" placement="left">
+                                <i class="fa fa-trash-o"></i>
+                            </a>
+                        </li>
+                        <li *ngIf="exibeUpload && linha.descricao !== 'CAIXA DIARIO' && linha.tipo !== 'CONTAS' && linha.midia == ''">
+                            <a (click)="upload(linha.hashID)" tooltip="Upload" placement="left">
+                                <i class="fa fa-upload"></i>
+                            </a>
+                        </li>
+                        <li *ngIf="exibeEditImage && linha.descricao !== 'CAIXA DIARIO' && linha.tipo !== 'CONTAS' && linha.midia != ''">
+                            <a (click)="editImage(linha.hashID)" tooltip="Editar Imagem" placement="left">
+                                <i class="fa fa-image"></i>
+                            </a>
+                        </li>
+                        <li *ngIf="exibeEdit && linha.descricao !== 'CAIXA DIARIO' && linha.tipo !== 'CONTAS'">
+                            <a (click)="edit(linha.hashID)" tooltip="Editar" placement="left">
+                                <i class="fa fa-pencil-square-o"></i>
+                            </a>
+                        </li>
+                        <li *ngIf="exibeView && linha.descricao !== 'CAIXA DIARIO' && linha.tipo !== 'CONTAS'">
+                            <a (click)="view(linha.hashID)" tooltip="Visualizar" placement="left">
+                                <i class="fa fa-plus-square-o"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </td>
+
+            </tr>
+        </tbody>
+
+    </table>
+
+</div>
+
+</div>
+
+<div class="col-md-12">
+
+    <!--FILTRO QTD-->
+    <ul class="ngx-pagination paginacao-qtd" style="display: inline-table; margin: 20px 0; padding: 0 !important; margin-left:-15px;">
+        <li class="disabled">{{totalRegistros}} registro(s)</li>
+        <li [class.active]="itemsPerPage === 15">
+            <a (click)="itemsPerPage = 15">15</a>
+        </li>
+        <li [class.active]="itemsPerPage === 30">
+            <a (click)="itemsPerPage = 30">30</a>
+        </li>
+        <li [class.active]="itemsPerPage === 50">
+            <a (click)="itemsPerPage = 50">60</a>
+        </li>
+        <li [class.active]="itemsPerPage === 100">
+            <a (click)="itemsPerPage = 100">100</a>
+        </li>
+    </ul>
+
+    <!--PAGINACAO-->
+    <pagination-controls
+        previousLabel="Anterior"
+        nextLabel="Próxima"
+        (pageChange)="page = $event"
+        class="pagination"
+        style="display: inline-table; margin-top: -20px !important; margin-left:-7px;">
+    </pagination-controls>
+</div>

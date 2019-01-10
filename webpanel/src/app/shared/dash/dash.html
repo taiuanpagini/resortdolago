@@ -1,0 +1,91 @@
+<div class="main-content">
+    <div class="container-fluid">
+
+        <!--ROW DADOS USER-->
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="card card-stats">
+                    <div class="card-content text-uppercase text-left">
+                        <h3 class="card-title"><strong>{{this.GlobalService.txtSaudacao}}, {{dadosUser.n}}!</strong></h3>
+                    </div>
+                    <div class="card-footer">
+                        <div class="stats">
+                            Seja bem vindo ao Painel Web!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--ROW CARDS-->
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4">
+                <div class="card card-stats">
+                    <div class="card-header card-page-{{this.GlobalService.theme}}">
+                        <i class="material-icons">people</i>
+                    </div>
+                    <div class="card-content">
+                        <p class="category">Usuários Ativos</p>
+                        <h3 class="card-title">{{usuariosAtivos}}</h3>
+                    </div>
+                    <div class="card-footer">
+                        <div class="stats">
+                            <i class="material-icons">date_range</i> Atualizado em: {{dataHoje | date: 'd/M/y -
+                            HH:mm'}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+                <div class="card card-stats">
+                    <div class="card-header card-page-{{this.GlobalService.theme}}">
+                        <i class="material-icons">dns</i>
+                    </div>
+                    <div class="card-content">
+                        <p class="category">Banners Ativos</p>
+                        <h3 class="card-title">{{bannersAtivos}}</h3>
+                        <ngb-carousel *ngIf="images">
+                            <ng-template ngbSlide *ngFor="let image of this.images">
+                                <img [src]="image.midia" class="img-fluid" alt="Caldas Coutry 2018">
+                            </ng-template>
+                        </ngb-carousel>
+                    </div>
+                    <div class="card-footer">
+                        <div class="stats">
+                            <i class="material-icons">date_range</i> Atualizado em: {{dataHoje | date: 'd/M/y -
+                            HH:mm'}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+                <div class="card card-stats">
+                    <div class="card-header card-page-{{this.GlobalService.theme}}">
+                        <i class="material-icons">list</i>
+                    </div>
+                    <div class="card-content">
+                        <p class="category">Depoimentos Ativos</p>
+                        <h3 class="card-title">{{depoimentosAtivos}}</h3>
+                    </div>
+                    <div class="card-footer">
+                        <div class="stats">
+                            <i class="material-icons">date_range</i> Atualizado em: {{dataHoje | date: 'd/M/y -
+                            HH:mm'}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--FINAL ROW CARDS-->
+
+        <!-- INICIO ROW SLIDERS -->
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6">
+
+                
+            </div>
+        </div>
+        <!-- FINAL ROW SLIDERS -->
+
+    </div>
+</div>
