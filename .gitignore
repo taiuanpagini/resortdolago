@@ -2,7 +2,7 @@
 
 # compiled output
 /dist
-/Admin/dist
+/webpanel/dist
 /Site/dist
 
 /tmp
@@ -10,7 +10,7 @@
 
 # dependencies
 /node_modules
-/Admin/node_modules
+/webpanel/node_modules
 /Site/node_modules
 
 # IDEs and editors
