@@ -28,6 +28,26 @@ export class TranquilidadeLazerComponent implements OnInit {
       previewUrl: 'assets/images/tranquilidade-lazer/galeria/galeria12.jpg'
     },
     {
+      srcUrl: 'assets/images/tranquilidade-lazer/galeria/galeria13.jpg',
+      previewUrl: 'assets/images/tranquilidade-lazer/galeria/galeria13.jpg'
+    },
+    {
+      srcUrl: 'assets/images/tranquilidade-lazer/galeria/galeria14.jpg',
+      previewUrl: 'assets/images/tranquilidade-lazer/galeria/galeria14.jpg'
+    },
+    {
+      srcUrl: 'assets/images/tranquilidade-lazer/galeria/galeria15.jpg',
+      previewUrl: 'assets/images/tranquilidade-lazer/galeria/galeria15.jpg'
+    },
+    {
+      srcUrl: 'assets/images/tranquilidade-lazer/galeria/galeria16.jpg',
+      previewUrl: 'assets/images/tranquilidade-lazer/galeria/galeria16.jpg'
+    },
+    {
+      srcUrl: 'assets/images/tranquilidade-lazer/galeria/galeria17.jpg',
+      previewUrl: 'assets/images/tranquilidade-lazer/galeria/galeria17.jpg'
+    },
+    {
       srcUrl: 'assets/images/tranquilidade-lazer/galeria/galeria1.jpg',
       previewUrl: 'assets/images/tranquilidade-lazer/galeria/galeria1.jpg'
     },
@@ -116,6 +136,10 @@ export class TranquilidadeLazerComponent implements OnInit {
 
   sliderGastronomia = [
     {
+      src: 'assets/images/tranquilidade-lazer/gastronomia-full-2.jpg',
+      alt: 'Fotos da gastronomia'
+    },
+    {
       src: 'assets/images/tranquilidade-lazer/gastronomia-full-1.jpg',
       alt: 'Fotos da gastronomia'
     }
@@ -156,7 +180,7 @@ export class TranquilidadeLazerComponent implements OnInit {
     private title: Title,
     public _lightbox: Lightbox
     ) {
-      for (let i = 1; i <= 11; i++) {
+      for (let i = 17; i >= 2; i--) {
         const src = 'assets/images/tranquilidade-lazer/galeria/galeria' + i + '.jpg';
         const caption = 'Tranquilidade e Lazer';
         const album = {

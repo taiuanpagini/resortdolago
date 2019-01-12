@@ -42,16 +42,34 @@ export class HomeComponent implements OnInit {
 
   banners = [
     {
-      title: "Sua vida em",
-      subtitle: "ritmo de férias!",
-      img: "assets/images/banner-1.png",
-      alt: "Sua vida em ritmo de férias"
+      title: "Férias incríveis",
+      subtitle: "te esperam",
+      img: "assets/images/banner-ferias.png",
+      alt: "Férias incríveis te esperam"
+    },
+    {
+      title: "Um resort às",
+      subtitle: "margens do lago",
+      img: "assets/images/banner-resort.png",
+      alt: "Um resort às margens do lago"
+    },
+    {
+      title: "O seu verão",
+      subtitle: "começa aqui",
+      img: "assets/images/banner-verao.png",
+      alt: "O seu verão começa aqui"
     },
     {
       title: "Um lugar",
       subtitle: "paradisíaco",
       img: "assets/images/banner-3.png",
       alt: "Um lugar paradisíaco"
+    },
+    {
+      title: "Sua vida em",
+      subtitle: "ritmo de férias!",
+      img: "assets/images/banner-1.png",
+      alt: "Sua vida em ritmo de férias"
     },
     {
       title: "Às margens do",
@@ -261,7 +279,7 @@ export class HomeComponent implements OnInit {
           this.HttpService.JSON_GET(`/data/depoimentos/nomePessoa/asc/*/id,hashID,sts,nomePessoa,depoimento/*`, headerConfig)
             .then(
               (res) => {
-                this.arDepoimentos = res.json().data;
+                this.arDepoimentos = JSON.parse(res.json().data);
                 // console.log(this.arDepoimentos);
                 // console.log(this.depoimentos);
 

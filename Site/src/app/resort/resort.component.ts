@@ -75,7 +75,7 @@ export class ResortComponent implements OnInit {
 
   sliderParque = [
     {
-      src: 'assets/images/resort/parque.jpg',
+      src: 'assets/images/resort/parque5.jpg',
       alt: 'Fotos do parque aquatico'
     },
     {
@@ -141,7 +141,7 @@ export class ResortComponent implements OnInit {
     private title: Title,
     public _lightbox: Lightbox
     ) {
-      for (let i = 1; i <= 14; i++) {
+      for (let i = 13; i >= 2; i--) {
         const src = 'assets/images/resort/galeria/galeria' + i + '.jpg';
         const caption = 'O Resort';
         const album = {

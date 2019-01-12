@@ -179,7 +179,7 @@ export class DiversaoAventuraComponent implements OnInit {
     private title: Title,
     public _lightbox: Lightbox
     ) {
-      for (let i = 1; i <= 18; i++) {
+      for (let i = 16; i >= 1; i--) {
         const src = 'assets/images/diversao-aventura/galeria/galeria' + i + '.jpg';
         const caption = 'Diversão e Aventura';
         const album = {
