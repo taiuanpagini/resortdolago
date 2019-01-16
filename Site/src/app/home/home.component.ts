@@ -7,6 +7,8 @@ import { GlobalsService } from '../providers/globals';
 import { StorageService } from '../providers/storage';
 import { ConnectService } from '../providers/connect';
 import { SnotifyService } from 'ng-snotify';
+import { componentRefresh } from '@angular/core/src/render3/instructions';
+import { OwlCarousel } from 'ngx-owl-carousel';
 
 declare var Rellax: any;
 declare var $: any;
@@ -276,10 +278,29 @@ export class HomeComponent implements OnInit {
           // /************
           // GET DEPOIMENTOS
           // *************/
-          this.HttpService.JSON_GET(`/data/depoimentos/nomePessoa/asc/*/id,hashID,sts,nomePessoa,depoimento/*`, headerConfig)
+          // this.carteProvider.getGenersCarte().subscribe(
+          //   data=> {
+          //     const response = (data as any);
+          //     const retorno = JSON.parse(response._body);
+          //     this.lista_generos = retorno;
+          //     console.log(retorno);
+          //   }, error=> {
+          //     console.log(error);
+          //   }
+          // )
+
+          return this.HttpService.JSON_GET(`/data/depoimentos/nomePessoa/asc/*/id,hashID,sts,nomePessoa,depoimento/*`, headerConfig)
             .then(
-              (res) => {
-                this.arDepoimentos = JSON.parse(res.json().data);
+              // function(response) {
+              //   return console.log(JSON.parse(response._body));
+              // });
+              (data) => {
+                const response = (data as any);
+                const retorno = JSON.parse(response._body);
+                console.log(retorno);
+              });
+              // (res) => {
+              //   this.arDepoimentos = res.json().data;
                 // console.log(this.arDepoimentos);
                 // console.log(this.depoimentos);
 
@@ -322,10 +343,11 @@ export class HomeComponent implements OnInit {
                     //   console.log(error);
                     // })
 
-              },
-              (error) => {
-                console.log(error);
-              })
+              // },
+              // (error) => {
+              //   console.log(error);
+              // }
+              // )
 
         // },
         // (error) => {
