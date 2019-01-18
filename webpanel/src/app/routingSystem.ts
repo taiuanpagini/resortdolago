@@ -66,6 +66,11 @@ import { ResortNewComponent } from './pages/resort/new';
 import { ResortEditComponent } from './pages/resort/edit';
 import { ResortUploadComponent } from './pages/resort/upload';
 import { ResortEditImageComponent } from './pages/resort/edit-image';
+import { PromocaoListComponent } from './pages/promocao/list';
+import { PromocaoNewComponent } from './pages/promocao/new';
+import { PromocaoEditComponent } from './pages/promocao/edit';
+import { PromocaoUploadComponent } from './pages/promocao/upload';
+import { PromocaoEditImageComponent } from './pages/promocao/edit-image';
 
 export const Routing: Routes = [
 
@@ -154,6 +159,41 @@ export const Routing: Routes = [
       {
         path: 'banner/:id/editar-imagem',
         component: BannerEditImageComponent,
+        data: {
+          title: 'Editar imagem upload'
+        }
+      },
+      {
+        path: 'promocao/lista',
+        component: PromocaoListComponent,
+        data: {
+          title: 'Gerenciar itens'
+        }
+      },
+      {
+        path: 'promocao/novo',
+        component: PromocaoNewComponent,
+        data: {
+          title: 'Adicionar item'
+        }
+      },
+      {
+        path: 'promocao/:id',
+        component: PromocaoEditComponent,
+        data: {
+          title: 'Editar item'
+        }
+      },
+      {
+        path: 'promocao/:id/upload-imagem',
+        component: PromocaoUploadComponent,
+        data: {
+          title: 'Upload item'
+        }
+      },
+      {
+        path: 'promocao/:id/editar-imagem',
+        component: PromocaoEditImageComponent,
         data: {
           title: 'Editar imagem upload'
         }

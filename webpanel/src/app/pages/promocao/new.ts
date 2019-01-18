@@ -24,10 +24,10 @@ import * as ptLocale from 'date-fns/locale/pt';
 
 declare var $: any;
 @Component({
-  selector: 'app-banner-new',
+  selector: 'app-promocao-new',
   templateUrl: './new.html'
 })
-export class BannerNewComponent implements OnInit {
+export class PromocaoNewComponent implements OnInit {
 
   itemCarregado: any = null;
   itemFotoProduto: any = null;

@@ -179,7 +179,7 @@
         <div class="offset-xl-1 col-xl-4 mt-8 offset-lg-1 col-lg-5 offset-md-1 col-md-6 offset-sm-4 col-sm-8 offset-4 col-8">
           <img src="assets//images/tripadvisor.png" alt="">
           <owl-carousel [options]="{items: 1, dots: false, nav: true, margin: 120, loop: true}" [carouselClasses]="['owl-theme', 'row', 'sliding']">
-            <div class="item" owl-carousel-item *ngFor="let depoimento of depoimentos">
+            <div class="item" owl-carousel-item *ngFor="let depoimento of arDepoimentos">
               <p class="description">
                 “{{ depoimento.depoimento }}”
               </p>

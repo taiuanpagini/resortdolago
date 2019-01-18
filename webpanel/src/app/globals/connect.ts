@@ -19,10 +19,16 @@ export class ConnectService {
 
     configConnect = {
         
+        // dbConfig:{
+        //     host: "resortdo_db.mysql.dbaas.com.br",
+        //     user: "resortdo_db",
+        //     password: "R123!@#321#@!",
+        //     database: "resortdo_db",
+        // },
         dbConfig:{
-            host: "resortdo_db.mysql.dbaas.com.br",
-            user: "resortdo_db",
-            password: "R123!@#321#@!",
+            host: "159.89.42.245",
+            user: "resortdo_novo",
+            password: "resortdonovo",
             database: "resortdo_db",
         },
         

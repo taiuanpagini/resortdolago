@@ -99,6 +99,11 @@ import { ResortNewComponent } from './pages/resort/new';
 import { ResortEditComponent } from './pages/resort/edit';
 import { ResortUploadComponent } from './pages/resort/upload';
 import { ResortEditImageComponent } from './pages/resort/edit-image';
+import { PromocaoListComponent } from './pages/promocao/list';
+import { PromocaoNewComponent } from './pages/promocao/new';
+import { PromocaoUploadComponent } from './pages/promocao/upload';
+import { PromocaoEditImageComponent } from './pages/promocao/edit-image';
+import { PromocaoEditComponent } from './pages/promocao/edit';
 
 @NgModule({
     declarations: [
@@ -129,6 +134,11 @@ import { ResortEditImageComponent } from './pages/resort/edit-image';
         BannerEditComponent,
         BannerUploadComponent,
         BannerEditImageComponent,
+        PromocaoListComponent,
+        PromocaoNewComponent,
+        PromocaoEditComponent,
+        PromocaoUploadComponent,
+        PromocaoEditImageComponent,
         DepoimentoListComponent,
         DepoimentoNewComponent,
         DepoimentoEditComponent,

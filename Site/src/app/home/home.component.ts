@@ -7,6 +7,8 @@ import { GlobalsService } from '../providers/globals';
 import { StorageService } from '../providers/storage';
 import { ConnectService } from '../providers/connect';
 import { SnotifyService } from 'ng-snotify';
+import { Http } from '@angular/http';
+import 'rxjs/add/operator/map';
 
 declare var Rellax: any;
 declare var $: any;
@@ -31,11 +33,13 @@ export class HomeComponent implements OnInit {
   constructor(
     private title: Title,
     public HttpService: HttpService,
+    public http: Http,
     public GlobalsService: GlobalsService,
     public StorageService: StorageService,
     public ConnectService: ConnectService,
     private snotifyService: SnotifyService
   ) {
+    this.getItensHome();
   }
 
   public sliderOptionsPromotions: any = { items: 3, dots: false, nav: true, margin: 120, loop: true, responsive: { 0: { items: 1, margin: 60 }, 600: { items: 2, margin: 20 }, 767: { items: 2, margin: 40 }, 991: { items: 2, margin: 120 }, 1200: { items: 3 } } };
@@ -271,66 +275,68 @@ export class HomeComponent implements OnInit {
     //   .then(
     //     (res) => {
     //       this.arBanners = res.json().data;
-          // console.log(this.arBanners);
+    // console.log(this.arBanners);
 
-          // /************
-          // GET DEPOIMENTOS
-          // *************/
-          this.HttpService.JSON_GET(`/data/depoimentos/nomePessoa/asc/*/id,hashID,sts,nomePessoa,depoimento/*`, headerConfig)
-            .then(
-              (res) => {
-                this.arDepoimentos = JSON.parse(res.json().data);
-                // console.log(this.arDepoimentos);
-                // console.log(this.depoimentos);
+    // /************
+    // GET DEPOIMENTOS
+    // *************/
 
-                // /************
-                // GET VIDEOS
-                // *************/
-                // this.HttpService.JSON_GET(`/data/videos/id/asc/*/id,hashID,sts,titulo,descricao,idvideo/1`, headerConfig)
-                //   .then(
-                //     (res) => {
-                //       this.arVideos = res.json().data;
-                //       // console.log(this.arVideos);
+    this.HttpService.JSON_GET(`/data/depoimentos/nomePessoa/asc/*/id,hashID,sts,nomePessoa,depoimento/*`, headerConfig)
+      .then(
+        (res) => {
+          this.arDepoimentos = res.json().data;
+          return this.arDepoimentos;
+          // console.log(this.arDepoimentos);
+    //       // console.log(this.depoimentos);
 
-                //       // /************
-                //       // GET ATRAÇÕES
-                //       // *************/
-                //       this.HttpService.JSON_GET(`/data/atracoes,imagens/atracoes.ordem/asc/imagens.idItem=atracoes.hashID,imagens.ref=logo-atracoes/atracoes.titulo,imagens.pathLarge as midia/*`, headerConfig, true)
-                //         .then(
-                //           (res) => {
-                //             this.arLogoAtracoes = res.json().data;
-                //             // console.log(this.arLogoAtracoes);
+    //       // /************
+    //       // GET VIDEOS
+    //       // *************/
+    //       // this.HttpService.JSON_GET(`/data/videos/id/asc/*/id,hashID,sts,titulo,descricao,idvideo/1`, headerConfig)
+    //       //   .then(
+    //       //     (res) => {
+    //       //       this.arVideos = res.json().data;
+    //       //       // console.log(this.arVideos);
 
-                //             this.HttpService.JSON_GET(`/data/atracoes,imagens/atracoes.ordem/asc/imagens.idItem=atracoes.hashID,imagens.ref=principal-atracoes/atracoes.id,atracoes.hashID,imagens.ref,atracoes.sts,atracoes.titulo,atracoes.descricao,imagens.pathLarge as midia2/*`, headerConfig, true)
-                //               .then(
-                //                 (res) => {
-                //                   this.arPrincipalAtracoes = res.json().data;
+    //       //       // /************
+    //       //       // GET ATRAÇÕES
+    //       //       // *************/
+    //       //       this.HttpService.JSON_GET(`/data/atracoes,imagens/atracoes.ordem/asc/imagens.idItem=atracoes.hashID,imagens.ref=logo-atracoes/atracoes.titulo,imagens.pathLarge as midia/*`, headerConfig, true)
+    //       //         .then(
+    //       //           (res) => {
+    //       //             this.arLogoAtracoes = res.json().data;
+    //       //             // console.log(this.arLogoAtracoes);
 
-                //                   // console.log(this.arPrincipalAtracoes);
-                //                 },
-                //                 (error) => {
-                //                   console.log(error);
-                //                 }
-                //               )
-                //           },
-                //           (error) => {
-                //             console.log(error);
-                //           })
+    //       //             this.HttpService.JSON_GET(`/data/atracoes,imagens/atracoes.ordem/asc/imagens.idItem=atracoes.hashID,imagens.ref=principal-atracoes/atracoes.id,atracoes.hashID,imagens.ref,atracoes.sts,atracoes.titulo,atracoes.descricao,imagens.pathLarge as midia2/*`, headerConfig, true)
+    //       //               .then(
+    //       //                 (res) => {
+    //       //                   this.arPrincipalAtracoes = res.json().data;
 
-                //     },
-                    // (error) => {
-                    //   console.log(error);
-                    // })
+    //       //                   // console.log(this.arPrincipalAtracoes);
+    //       //                 },
+    //       //                 (error) => {
+    //       //                   console.log(error);
+    //       //                 }
+    //       //               )
+    //       //           },
+    //       //           (error) => {
+    //       //             console.log(error);
+    //       //           })
 
-              },
-              (error) => {
-                console.log(error);
-              })
+    //       //     },
+    //       // (error) => {
+    //       //   console.log(error);
+    //       // })
 
-        // },
-        // (error) => {
-        //   console.log(error);
-        // })
+        },
+        (error) => {
+          console.log(error);
+        })
+
+    // },
+    // (error) => {
+    //   console.log(error);
+    // })
   }
 
   ngOnInit() {

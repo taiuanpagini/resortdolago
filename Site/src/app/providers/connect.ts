@@ -30,7 +30,7 @@ export class ConnectService {
             host: "159.89.42.245",
             user: "resortdo_novo",
             password: "resortdonovo",
-            database: "resortdo_novo",
+            database: "resortdo_db",
         },
         
         ftpConfig:{
